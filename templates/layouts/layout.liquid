@@ -8,6 +8,7 @@
         <!-- Title block allowing child pages to override -->
         <title>{% block title %}Shropgeek (R)evolution 2014{% endblock %}</title>
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.png" />
         {% include "typekit" %}
         <!-- Styles -->
         {{ "global.css" | asset_url | stylesheet_tag }}
@@ -21,6 +22,10 @@
         </div>
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
-        {{ "app.js" | asset_url | script_tag }}
+        {{ "modernizer.min.js" | asset_url | script_tag }}
+        {{ "svgeezy.min.js" | asset_url | script_tag }}
+        <script>
+            svgeezy.init('nocheck', 'png');
+        </script>
     </body>
 </html>
