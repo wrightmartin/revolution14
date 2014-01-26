@@ -496,7 +496,7 @@ p {
   clear: both; }
   @media (min-width: 33.75em) {
     .content-position {
-      top: 100px; } }
+      top: 80px; } }
   @media (min-width: 64em) {
     .content-position {
       top: -50px; } }
