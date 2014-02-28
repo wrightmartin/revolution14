@@ -1,12 +1,18 @@
 $tisa: "ff-tisa-web-pro", Georgia, "Times New Roman", Times, serif;
 $futura: "futura-pt-condensed", "Arial Narrow", sans-serif;
 $freight: "freight-sans-pro", "Helvetica Neue", Arial, Helvetica, serif;
+$nova: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif;
 
 $colour_gold: #caa75b;
+$colour_red: #c1503e;
+$colour_black: #333333;
 
-$colour_background: #333;
-$colour_links: $colour_gold;
+$colour_text: $colour_black;
+$colour_background: #fff;
+$colour_links: $colour_red;
 
-$giant-screen: 87.5em;
+$gutter-width: 2em;
+
+$giant-screen: 77.777777778em;
 $large-screen: 64em;
-$medium-screen: 33.75em;
+$medium-screen: 41.875em;

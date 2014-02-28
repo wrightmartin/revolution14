@@ -10,17 +10,13 @@ html {
 body {
     font-family: $tisa;
     background-color: $colour_background;
-    background-image: url("../img/background-1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff;
+    color: $colour_text;
     font-size: 1em;
     line-height: 1.5em;
     height: 100%;
     min-height: 100%;
-    @media (min-width: $large-screen) {
-        font-size: 1.375em;
+    @media (min-width: $medium-screen) {
+        font-size: 1.125em;
         line-height: 1.5em;
     }
 }
@@ -35,127 +31,68 @@ a {
     }
 }
 
-.hoz-form {
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.1em;
+    text-rendering: optimizeLegibility;
+    font-family: $nova;
+}
 
-    .hoz-form__field {
-        width: 66%;
-        float: left;
-    }
-    .field {
-        width: 100%;
-    }
-    .hoz-form__button {
-        width: 34%;
-        float: left;
-    }
-    .button {
-        width: 100%;
-    }
+h4, h5, h6 {
+    font-family: $nova;
 }
-.signup-form {
-    width: 100%;
-    @media (min-width: $medium-screen) {
-        max-width: 24em;
-    }
-    label {
-        display: inline-block;
-        margin-bottom: 0.5em;
-    }
+
+img {
+    max-width: 100%;
 }
-.field,
-.button {
-    padding: .66em;
-    -webkit-appearance: none;
-    display: inline-block;
-    border: none;
-    border-radius: 0;
+
+h1,
+.primary-heading {
+    font-size: 3.333333333em;
+    font-weight: 700;
 }
-.button {
-    background-color: $colour_gold;
-    color: #fff;
-    padding: .66em;
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: darken($colour_gold, 5%);
-    }
+
+h2,
+.secondary-heading {
+    font-size: 2.333333333em;
+    font-weight: 700;
+}
+
+h3,
+.tertiary-heading {
+    font-size: 1.333333333em;
+    font-weight: 600;
+}
+
+h4,
+.quarternary-heading {
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+h5,
+.quinary-heading {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h6,
+.senary-heading {
+    font-size: 0.9375em;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 p {
     font-size: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
-.gold-type {
-    color: $colour_gold;
-}
-
-.shropgeek-tab {
-    background-color: black;
-    font-family: $freight;
-    text-align: center;
-    margin: 0 auto;
-    width: 5em;
-    height: 5em;
-    color: #fff;
-    @media (min-width: $medium-screen) {
-        float: right;
-        width: 7em;
-        height: 7em;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: none;
-        background-color: #fff;
-        color: $colour_gold;
-    }
-}
-
-.shropgeek-tab__top,
-.shropgeek-tab__bottom {
-    display: block;
-    line-height: 1.1em;
-}
-
-.shropgeek-tab__top {
-    font-size: .75em;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding-top: 2.2em;
-    @media (min-width: $medium-screen) {
-        padding-top: 3em;
-        font-size: 0.846153846em;
-    }
-}
-
-.shropgeek-tab__bottom {
-    font-weight: 300;
-    font-size: 0.6em;
-    @media (min-width: $medium-screen) {
-        font-size: 0.636363636em;
-    }
-}
-
-.revolution-2014-logo {
-    width: 100%;
-    height: auto;
-    color: #fff;
-}
-
-.signup-form,
-.date-time,
-.subtitle {
-    text-align: center;
-    @media (min-width: $medium-screen) {
-        text-align: left;
-    }
-}
-.date-time {
-    text-transform: uppercase;
-}
-
-.subtitle {
-    max-width: 30em;
+p + p {
+    margin-top: 0;
 }
 
 .wrapper {
@@ -164,53 +101,81 @@ p {
     @media (min-width: $medium-screen) {
         padding: 0 3%;
     }
-    max-width: 63.636363636em;
+    max-width: 71.25em;
     margin: 0 auto;
 }
 
-.site-title {
-    width: 110%;
-    margin-left: -5%;
-    @media (min-width: $medium-screen) {
-        width: 100%;
-        margin-left: 0;
-    }
+.grid {
+    width: 100%;
+    @include clearfix;
 }
 
-.content-position {
-    position: relative;
-    clear: both;
-    @media (min-width: $medium-screen) {
-        top: 80px;
-    }
-    @media (min-width: $large-screen) {
-        top: -50px;
-    }
-    @media (min-width: $giant-screen) {
-        top: 0;
-    }
+.media {
+    @extend %media;
+}
+
+.column {
+    float: left;
+    padding-top: $gutter-width/2;
+    padding-bottom: $gutter-width/2;
 }
 
 @media (min-width: $medium-screen) {
-    .signup-form,
-    .date-time,
-    .subtitle {
-        position: absolute;
-        left: 26%;
+    .column {
+        padding: $gutter-width/2;
+        .first,
+        &:first-child {
+            padding-left: 0;
+        }
+        .last,
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    .two-columns {
+        .column {
+            width: 50%;
+        }
     }
 
-    .date-time {
-        top: 4%;
+    .three-columns {
+        .column {
+            width: 33.333333%;
+        }
     }
-
-    .subtitle {
-        top: 69%;
+    .four-columns,
+    .six-columns {
+        .column {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
 @media (min-width: $large-screen) {
-     .date-time {
-        top: 10%;
+    .four-columns,
+    .six-columns {
+        .column {
+            padding: $gutter-width/2;
+            .first,
+            &:first-child {
+                padding-left: 0;
+            }
+            .last,
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    .four-columns {
+        .column {
+            width: 25%;
+        }
+    }
+
+    .six-columns {
+        .column {
+            width: 16.666666667%;
+        }
     }
 }
-

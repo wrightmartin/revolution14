@@ -3,3 +3,62 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+.container {
+    max-width: 63.333333333em;
+    padding: 0 1em;
+    margin: 0 auto;
+    position: relative;
+}
+
+.unstyled-list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none outside none;
+}
+
+.inline-list {
+    margin-left: -0.5em;
+    margin-bottom: 0;
+    li {
+        display: inline-block;
+        margin-left: 0.5em;
+    }
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+    &{
+        *zoom: 1;
+    }
+}
+
+%media {
+    @include clearfix;
+    &>:first-child {
+        float: left;
+        margin-right: $gutter-width/2;
+    }
+    &>:last-child {
+        overflow: hidden;
+    }
+}
+
+@mixin button($background-color: #dd4400) {
+    padding: 0.3em;
+    background-color: $background-color;
+    color: #fff;
+}
