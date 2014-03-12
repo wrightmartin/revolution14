@@ -1,0 +1,54 @@
+{
+  "title": "Speakers",
+  "speaker": [
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": ["Headscape", "Boagworld", "Twitter"],
+      "personal_url": "http://headscape.co.uk",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    }
+  ]
+}

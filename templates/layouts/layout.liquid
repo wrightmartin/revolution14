@@ -23,16 +23,29 @@
 
             <!-- Content block, child page inject content -->
             {% block content %}{% endblock %}
+
         {% block close-wrapper %}
           </div>
         {% endblock %}
-
+        {% include "footer" %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
         {{ "modernizer.min.js" | asset_url | script_tag }}
         {{ "svgeezy.min.js" | asset_url | script_tag }}
+        {{ "responsive-nav.min.js" | asset_url | script_tag }}
+        {{ "fitvids.min.js" | asset_url | script_tag }}
         <script>
             svgeezy.init('nocheck', 'png');
+        </script>
+        <script>
+          $(document).ready(function(){
+            // Target your .container, .wrapper, .post, etc.
+            $(".welcome-back__video").fitVids();
+          });
+        </script>
+        <script>
+            var nav = responsiveNav(".nav-collapse");
         </script>
     </body>
 </html>

@@ -11,13 +11,13 @@
     position: relative;
 }
 
-.unstyled-list {
+@mixin unstyled-list {
     margin-left: 0;
     padding-left: 0;
     list-style: none outside none;
 }
 
-.inline-list {
+@mixin inline-list {
     margin-left: -0.5em;
     margin-bottom: 0;
     li {
@@ -46,7 +46,7 @@
     }
 }
 
-%media {
+@mixin media-block {
     @include clearfix;
     &>:first-child {
         float: left;
@@ -61,4 +61,87 @@
     padding: 0.3em;
     background-color: $background-color;
     color: #fff;
+}
+
+@function calculateRem($size, $base) {
+  $remSize: $size / $base;
+  @return #{$remSize}rem;
+}
+
+/*
+ * Send a size in pixels, property (optional), and a base size (optional)
+ * Returns the same size calculated in rems and a fall-back px for older browsers
+ * Input
+ * @include remSize(18px, margin-top, 16px);
+ * Output
+ * margin-top: 18px;
+ * margin-top: 1.125rem;
+ */
+@mixin remSize($size, $property:font-size, $base:$size-font-base) {
+  #{$property}: $size; //Fallback in px
+  #{$property}: calculateRem($size, $base);
+}
+
+$prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
+@mixin prefix($property, $value) {
+    @each $prefix in $prefixes {
+        #{$prefix}#{$property}: #{$value};
+    }
+}
+
+@mixin grid-row  {
+    @include clearfix;
+}
+
+@mixin grid-column {
+    float: left;
+    padding-left: 3%;
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+@mixin grid-column--half {
+    width: 50%;
+}
+@mixin grid-column--quarter {
+    width: 25%;
+}
+
+@mixin grid-column--sixth {
+    width: 16.666666667%;
+}
+
+@mixin grid-column--five-sixths {
+    width: 83.333333335%;
+}
+
+@mixin grid-column--block {
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: top;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+@mixin block-grid-quarter {
+    width: 22.75%;
+    &:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+@mixin block-grid-third {
+    width: 30.666666667%;
+    &:nth-child(4) {
+        margin-left: 0;
+    }
+}
+
+@mixin block-grid-half {
+    width: 48.5%;
+    &:nth-child(odd) {
+        margin-left: 0;
+    }
 }

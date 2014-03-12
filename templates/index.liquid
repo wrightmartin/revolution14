@@ -1,19 +1,138 @@
+{% model "speakers.json" %}
+{% block open-wrapper %}
+{% endblock %}
 {% block content %}
-<a class="shropgeek-tab" href="http://www.shropgeek.co.uk"><span class="shropgeek-tab__top">Shropgeek</span> <span class="shropgeek-tab__bottom">presents</span></a>
-<div class="content-position">
-<p class="date-time">26 September 2014 <span class="gold-type">&#8226;</span> Shrewsbury, Shropshire</p>
-
-<h1 title="(R)evolution 2014" class="site-title"><img class="revolution-2014-logo" src="assets/img/2014-logo.svg"/></h1>
-<p class="subtitle">Featuring  <a href="http://boagworld.com/">Paul Boag</a>, <a href="http://andydavies.me/">Andy Davies</a>, <a href="http://fffunction.co/">Adam Robertson & Dan Goodwin</a> and more soon to be announced speakers</p>
-<div class="signup-form">
-    <form action="http://shropgeek-revolution.createsend.com/t/t/s/judyut/" method="post">
-        <label for="fieldEmail">Get announcements in your inbox</label>
-        <div class="hoz-form">
-            <div class="hoz-form__field"> <input id="fieldEmail" class="field" name="cm-judyut-judyut" type="email" required /></div>
-            <div class="hoz-form__button"><input type="submit" value="Notify me" class="button"/></div>
+<div class="hero">
+    <div class="wrapper">
+        <h1>We're back for our fifth year</h1>
+        <p class="subtitle">Come and join us for one of the web industry’s friendliest conferences, and stay for one of the UK’s most beautiful towns</p>
+    </div>
+</div>
+<div class="speakers">
+    <div class="wrapper">
+    <!-- Don't remove this comment - inline-block fix
+        {% for speaker in model.speaker %}
+            --><div class="grid-unit--speaker">
+                <div class="speaker speaker--preview">
+                    <a href="#" class="block-link">
+                        <img src="assets/img/{{ speaker.photo }}" alt="" />
+                        <h2 class="speaker__name">{{ speaker.name }}</h2>
+                    </a>
+                    <p class="speaker__meta speaker__jobtitle">
+                        {{ speaker.job_title }}
+                    </p>
+                    <p class="speaker__meta speaker__org">
+                        {% for org in speaker.organisation %}
+                            {{ org }}{% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div><!-- Don't remove this comment - inline-block fix
+        {% endfor %}
+        -->
+    </div>
+</div>
+<div class="welcome-back">
+    <div class="wrapper">
+        <h2>Welcome back</h2>
+        <div class="welcome-back__grid-row">
+            <div class="welcome-back__grid-unit">
+                <div class="welcome-back__text-intro">
+                <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+                </div>
+            </div><!--
+            --><div class="welcome-back__grid-unit">
+                <div class="welcome-back__video">
+                    <iframe width="640" height="360" src="//www.youtube.com/embed/DCJqkBHxOFI?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-    </form>
-</form>
+    </div>
 </div>
+<div class="whats-included">
+    <div class="wrapper">
+        <h2>What's included</h2>
+        <div class="whats-included__grid-row">
+            <div class="whats-included__grid-unit">
+                <div class="whats-included__feature">
+                    <img src="http://placehold.it/100x100/" />
+                    <div>
+                        <h3>Feature title</h3>
+                        <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                    </div>
+                </div>
+            </div><!--
+            --><div class="whats-included__grid-unit">
+                <div class="whats-included__feature">
+                    <img src="http://placehold.it/100x100/" />
+                    <div>
+                        <h3>Feature title</h3>
+                        <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                    </div>
+                </div>
+            </div><!--
+            --><div class="whats-included__grid-unit">
+                <div class="whats-included__feature">
+                    <img src="http://placehold.it/100x100/" />
+                    <div>
+                        <h3>Feature title</h3>
+                        <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                    </div>
+                </div>
+            </div><!--
+            --><div class="whats-included__grid-unit">
+                <div class="whats-included__feature">
+                    <img src="http://placehold.it/100x100/" />
+                    <div>
+                        <h3>Feature title</h3>
+                        <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                    </div>
+                </div>
+            </div><!--
+            --><div class="whats-included__grid-unit">
+                <div class="whats-included__feature">
+                    <img src="http://placehold.it/100x100/" />
+                    <div>
+                        <h3>Feature title</h3>
+                        <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                    </div>
+                </div>
+            </div><!--
+            --><div class="whats-included__grid-unit">
+                <div class="whats-included__feature">
+                    <img src="http://placehold.it/100x100/" />
+                    <div>
+                        <h3>Feature title</h3>
+                        <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="who-is-it-for">
+    <div class="wrapper">
+        <h2>Who is it for</h2>
+        <div class="who-is-it-for__grid-row">
+            <div class="who-is-it-for__grid-unit">
+                <img src="http://placehold.it/400x300/" />
+                <h3>This guy</h3>
+                <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            </div><!--
+            --><div class="who-is-it-for__grid-unit">
+                <img src="http://placehold.it/400x300/" />
+                <h3>This guy</h3>
+                <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            </div><!--
+            --><div class="who-is-it-for__grid-unit">
+                <img src="http://placehold.it/400x300/" />
+                <h3>This guy</h3>
+                <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block close-wrapper %}
 {% endblock %}
