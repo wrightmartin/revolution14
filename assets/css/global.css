@@ -1011,7 +1011,8 @@ p + p {
       padding-left: 0; } }
 
 .schedule__time {
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif; }
+  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif;
+  margin-bottom: 1em; }
 
 .meridian {
   color: #777777; }
@@ -1077,40 +1078,3 @@ p + p {
   padding: 1.5em;
   border: 1px solid #e9e9e9;
   margin-bottom: 1.5em; }
-
-@media (min-width: 41.875em) {
-  .column {
-    padding: 1em; }
-    .column .first, .column:first-child {
-      padding-left: 0; }
-    .column .last, .column:last-child {
-      padding-right: 0; }
-
-  .two-columns .column {
-    width: 50%; }
-
-  .three-columns .column {
-    width: 33.333333%; }
-
-  .four-columns .column,
-  .six-columns .column {
-    padding-left: 0;
-    padding-right: 0; } }
-@media (min-width: 64em) {
-  .four-columns .column,
-  .six-columns .column {
-    padding: 1em; }
-    .four-columns .column .first, .four-columns .column:first-child,
-    .six-columns .column .first,
-    .six-columns .column:first-child {
-      padding-left: 0; }
-    .four-columns .column .last, .four-columns .column:last-child,
-    .six-columns .column .last,
-    .six-columns .column:last-child {
-      padding-right: 0; }
-
-  .four-columns .column {
-    width: 25%; }
-
-  .six-columns .column {
-    width: 16.666666667%; } }

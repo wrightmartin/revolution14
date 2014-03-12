@@ -19,15 +19,40 @@
 
 <header class="header header--site">
     <div class="wrapper">
-        <a href="#" class="site-logo"><h1>(R)evolution</h1></a>
+        <a href="/" class="site-logo"><h1>(R)evolution</h1></a>
         <div class="navigation-position">
           <nav class="site-nav nav-collapse" role="navigation">
             <ul class="primary-links-menu nav__menu">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Speakers</a></li>
-              <li><a href="#">Schedule</a></li>
-              <li><a href="#">Location</a></li>
-              <li><a href="#">Fringe</a></li>
+              <li
+                {% if mixture.url == "about" %}
+                    class="current"
+                {% endif %}>
+                <a href="about">about</a>
+              </li>
+              <li
+                {% if mixture.url == "speakers" %}
+                    class="current"
+                {% endif %}>
+                <a href="speakers">Speakers</a>
+              </li>
+              <li
+                {% if mixture.url == "schedule" %}
+                    class="current"
+                {% endif %}>
+                <a href="schedule">Schedule</a>
+              </li>
+              <li
+                {% if mixture.url == "location" %}
+                    class="current"
+                {% endif %}>
+                <a href="location">Location</a>
+              </li>
+              <li
+                {% if mixture.url == "fringe" %}
+                    class="current"
+                {% endif %}>
+                <a href="fringe">Fringe</a>
+              </li>
               <li class="secondary-link"><a href="#">News</a></li>
               <li class="secondary-link"><a href="#">Contact</a></li>
               <li class="secondary-link"><a href="#" class="tickets-button">Tickets</a></li>
