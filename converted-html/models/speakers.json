@@ -1,0 +1,75 @@
+{
+  "title": "Speakers",
+  "speaker": [
+    {
+      "name": "Paul Boag",
+      "organisations": [
+        [
+          {
+            "name": "Headscape",
+            "url": "http://www.headscape.co.uk"
+          },
+          {
+            "name": "Boagworld",
+            "url": "http://www.boagworld.co.uk"
+          }
+        ]
+      ],
+      "photo": "paul-boag.jpg",
+      "description": "<p>Paul Boag has been working with the web since 1994. He is now co-founder of the digital agency Headscape, where he works closely with clients to establish their web strategy.</p><p>Paul is a prolific writer having written Digital Adaptation, Website Owners Manual, Client Centric Web Design and numerous articles for publications such as .net magazine, Smashing Magazine and the econsultancy.com.</p><p>Paul also speaks extensively on various aspects of web design both at conferences across the world and on his award winning web design podcast boagworld.</p>"
+    },
+    {
+      "name": "Rachel Andrew",
+      "organisations": [
+        [
+          {
+            "name": "edgeofmyseat.com",
+            "url": "http://edgeofmyseat.com"
+          },
+          {
+            "name": "Perch",
+            "url": "http://www.grabaperch.com"
+          }
+        ]
+      ],
+      "photo": "rachel-andrew.jpg",
+      "description": "<p>Rachel Andrew is a web developer, writer, speaker and one half of edgeofmyseat.com - the company behind the CMS Perch. She has been working on the web since the late 90s and running her own company since 2001.</p><p>When not working on her own product, Rachel enjoys helping other people transition from consultancy and client services to profitable product businesses - without needing to seek investment or risk everything by “doing a startup”.</p>"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    },
+    {
+      "name": "Paul Boag",
+      "job_title": "Managing Director",
+      "organisation": "Headscape",
+      "photo": "paul-boag.jpg"
+    }
+  ]
+}

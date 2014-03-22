@@ -35,15 +35,12 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0.5em;
+    margin-top: 0;
     margin-bottom: 0.5em;
     line-height: 1.1em;
     text-rendering: optimizeLegibility;
-    font-family: $nova;
-}
-
-h4, h5, h6 {
-    font-family: $nova;
+    font-family: $futura;
+    text-transform: uppercase;
 }
 
 img {
@@ -65,7 +62,8 @@ h2,
 h3,
 .tertiary-heading {
     font-size: 1.333333333em;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: $futura-narrow;
 }
 
 h4,
@@ -90,12 +88,14 @@ h6,
 
 p {
     font-size: 1em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0;
 }
 
-p + p {
-    margin-top: 0;
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5em;
+    border-left: 3px solid $colour_red;
 }
 
 .wrapper {
@@ -187,6 +187,8 @@ p + p {
         @extend .image-replacement;
         display: inline-block;
         background-image: url('../img/2014-logo.svg');
+        background-position: top left;
+        background-repeat: no-repeat;
     }
 }
 
@@ -227,15 +229,15 @@ p + p {
 }
 
 .primary-links-menu {
-    font-family: $nova;
+    font-family: $futura;
     border-top: 1px solid rgba(255,255,255,0.1);
     @include unstyled-list;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
     @media (min-width: $large-screen) {
-         border-top: none;
-        text-transform: uppercase;
+        border-top: none;
         font-size: .888888889em;
-        letter-spacing: 1px;
-        font-weight: 700;
         text-align: right;
     }
     a {
@@ -252,6 +254,26 @@ p + p {
         visibility: hidden;
     }
 }
+.secondary-links-menu a {
+    position: relative;
+    top: -1em;
+}
+.nav__menu .tickets-button {
+    @media (min-width: $large-screen) {
+        background-color: #fff;
+        color: $colour_red;
+        padding: 1em;
+        display: inline-block;
+    }
+}
+.hashtag {
+    font-family: $futura-narrow;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1em;
+}
+
 
 /*! responsive-nav.js 1.0.31 by @viljamis */
 .js .nav-collapse {
@@ -312,7 +334,7 @@ p + p {
 }
 
 .footer--site-footer__grid-row {
-    @extend grid-row;
+    @include grid-row;
 }
 
 .footer--site-footer__grid-unit-about {
@@ -330,9 +352,22 @@ p + p {
     }
 }
 
+.shropgeek-logo {
+       @extend .image-replacement;
+        display: inline-block;
+        background-image: url('../img/shropgeek.svg');
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 200px 153px;
+        height: 153px;
+        width: 200px;
+}
 .about-shropgeek {
     @include media-block;
     margin-bottom: 3em;
+    p {
+        font-size: 0.888888889em;
+    }
 }
 
 .site-footer__links-list {
@@ -340,21 +375,17 @@ p + p {
     float: left;
     ul {
         @include unstyled-list;
-        font-family: $nova;
+        font-family: $futura;
         margin: 0;
     }
     a {
         font-size: 0.777777778em;
+        text-transform: uppercase;
+        font-weight: 700;
     }
     h3 {
         @extend .senary-heading;
         font-size: 0.777777778em
-    }
-}
-
-.about-shropgeek {
-    p {
-        font-size: 0.888888889em;
     }
 }
 
@@ -379,6 +410,7 @@ p + p {
     h1 {
         color: $colour_red;
         text-align: center;
+        margin-bottom: 0;
     }
     .subtitle {
         text-align: center;
@@ -386,7 +418,34 @@ p + p {
         line-height: 1.5em;
         max-width: 29em;
         margin: 0 auto;
+        @extend .stars;
+        padding-bottom: 1.4em;
     }
+}
+
+.hero-homepage {
+    border-bottom: 1px solid $colour_borders;
+    margin-bottom: $gutter-width * 2;
+}
+
+.hero--border {
+    border-bottom: 1px solid $colour_borders;
+}
+
+.small-heading {
+    color: $colour_black !important;
+    font-size: 1.5em;
+    background-image: none !important;
+}
+.fifth-year {
+    width: 70%;
+    height: 160px;
+    @extend .image-replacement;
+    display: block;
+    background-image: url('../img/fifth-year.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
 }
 .hero--short {
     padding-top: $gutter-width;
@@ -404,6 +463,7 @@ p + p {
         > h2 {
             text-align: center;
             margin-bottom: 1em;
+            color: $colour_red;
         }
     }
 }
@@ -413,7 +473,7 @@ p + p {
     padding: 0 0 1.5em;
 }
 
-.grid-unit--speaker {
+.grid-unit--speaker--preview {
     @media (min-width: $medium-screen) and (max-width: $large-screen) {
         @include grid-column--block;
         @include block-grid-half;
@@ -424,17 +484,17 @@ p + p {
     }
 }
 
-.speaker {
+.speaker--preview {
     text-align: center;
     margin-bottom: 3.5em;
 }
 
-.speaker__name {
+.speaker--preview__name {
     font-size: 1.333333333em;
     font-weight: 600;
 }
 
-.speaker__meta {
+.speaker--preview__meta {
     font-size: 0.833333333em;
     line-height: 1.5em;
     margin-bottom: 0;
@@ -526,23 +586,22 @@ p + p {
 .big-schedule-list {
     @include unstyled-list;
     @include clearfix;
-    border-bottom: 1px solid $colour_borders;
 }
 
 .schedule-item {
     @include grid-row;
     padding-top: 2em;
     padding-bottom: 2em;
-    border-top: 1px solid $colour_borders;
+    border-bottom: 1px solid $colour_borders;
 }
 
-.schedule-column--time {
+.schedule-unit--time {
     @media (min-width: $medium-screen) {
         @include grid-column;
         @include grid-column--sixth;
     }
 }
-.schedule-column--entry {
+.schedule-unit--entry {
     @media (min-width: $medium-screen) {
         @include grid-column;
         @include grid-column--five-sixths;
@@ -554,7 +613,7 @@ p + p {
 }
 
 .schedule__time {
-    font-family: $nova;
+    font-family: $futura;
     margin-bottom: 1em;
 }
 
@@ -564,7 +623,7 @@ p + p {
 
 .schedule__agenda-name {
     font-size: 1.166666667em;
-    font-weight: 400;
+    //font-weight: 400;
     margin-top: 0;
 }
 
@@ -574,7 +633,8 @@ p + p {
 }
 
 .schedule__talk-title {
-    font-family: $nova;
+    font-family: $futura;
+    font-weight: 700;
     font-size: 1em;
 }
 
@@ -582,11 +642,265 @@ p + p {
     color: $colour_grey;
 }
 
+.speaker {
+    border-bottom: 1px solid $colour_borders;
+    padding: $gutter-width 0 $gutter-width * 2;
+}
+
+.speaker__details {
+    @include grid-row;
+}
+
+.speaker-unit--metadata {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--sixth;
+    }
+}
+
+.speaker-unit--description {
+    @media (min-width: $medium-screen) {
+        @include grid-column;
+        @include grid-column--three-quarters;
+        @include grid-column--no-padding;
+    }
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--seven-twelfths;
+    }
+}
+
+.speaker-unit--photo {
+    margin-top: $gutter-width;
+    @media (min-width: $medium-screen) {
+        @include grid-column;
+        @include grid-column--quarter;
+        margin-top: 0;
+    }
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--quarter;
+    }
+}
+
+.speaker__metadata {
+     margin-bottom: 1em;
+    ul {
+        @include unstyled-list;
+        margin-top: 0;
+        @media (max-width: $large-screen) {
+            @include inline-list;
+            li {
+                &:before {
+                    content: ' / ';
+                    padding-right: 0.66em;
+                    color: $colour_borders;
+                }
+                &:first-child {
+                    &:before {
+                        content: '';
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.speaker__description {
+    margin-right: 7%;
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+/* Location */
+
+.location__conference-centre {
+    @extend .fullpage-section;
+    padding-top: 0;
+}
+
+
+.conference-centre--grid-row {
+    @include grid-row;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conference-centre--grid-unit {
+    @media (min-width: $medium-screen) {
+        @include grid-column;
+        @include grid-column--half;
+    }
+}
+
+.map {
+    position: relative;
+    margin-bottom: $gutter-width * 2;
+}
+
+.map-canvas {
+    width:100%;
+    min-height:600px;
+    @include clearfix();
+}
+
+.conference-centre-info {
+        background: $colour_gold;
+        color: #fff;
+        z-index: 300;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        max-width: 100%;
+        @include prefix(box-shadow, 0 2px 3px 0px rgba(0,0,0,.3));
+        @include prefix(transition, all .35s ease-in);
+        &:after {
+            content:'';
+            position:absolute;
+            bottom:-15px;
+            left:50%;
+            margin-left:-13px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $colour_gold;
+        }
+        a {
+            color: lighten($colour_gold, 25%);
+            font-family: $futura;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.75em;
+            @include hoverActiveFocus{
+                color: #fff;
+            }
+        }
+        img {
+            line-height: 1em;
+        }
+        .vcard {
+            padding: .5em 4% 1em;
+            .street-address span {
+                display: block;
+            }
+        }
+        .visible {
+            opacity: 1;
+            top: 5.5em;
+        }
+}
+
+#directionsPanel {
+    position:absolute;
+    padding:10px;
+    right:0;
+    top:0;
+    width:30%;
+    height:100%;
+    z-index:5;
+    background-color:white;
+    display:none;
+}
+
+@media (min-width: $medium-screen) {
+    .map {
+        min-height: 400px;
+        @include prefix(box-shadow, inset 0 1px 3px rgba(0,0,0,0.2));
+        .conference-centre-info {
+            max-width: 15em;
+            top: 3em;
+            left: 145px;
+            left: 50%;
+            margin-left: -7.5em;
+        }
+    }
+}
+
+.location__shrewsbury {
+    @extend .fullpage-section;
+    padding-top: 0;
+}
+
+.shrewsbury__photo-bg {
+    background-image: url('../img/shrewsbury.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em 0;
+    @include clearfix;
+}
+
+.shrewsbury__photo__block {
+    background-color: $colour_red;
+    color: #fff;
+    padding: $gutter-width;
+    max-width: 22em;
+    margin: 0 auto;
+    @media (min-width: $medium-screen) {
+        margin: 2em 3em 2em 0;
+        float: right;
+    }
+}
+.shrewsbury__grid-row {
+    @include grid-row;
+}
+
+.shrewsbury__travel {
+    padding: $gutter-width*2 0;
+    border-bottom: 1px solid $colour_borders;
+}
+
+.shrewsbury__travel--grid-unit {
+    @media (min-width: $medium-screen) {
+        @include grid-column--block;
+        @include block-grid-third;
+    }
+}
+
+.push-top {
+    @media (min-width: $medium-screen) {
+        margin-top: 2.8em;
+    }
+}
+
+.shrewsbury__accomodation {
+    padding: $gutter-width*2 0 0;
+}
+
+.shrewsbury__accomodation--grid-unit {
+    @media (max-width: $medium-screen) {
+        @include grid-column--block;
+        @include block-grid-half;
+    }
+     @media (min-width: $medium-screen) and (max-width: $large-screen) {
+        @include grid-column--block;
+        @include block-grid-third;
+    }
+    @media (min-width: $large-screen) {
+        @include grid-column--block;
+        @include block-grid-fifth;
+    }
+}
+
+.hotel {
+    margin: $gutter-width/2 0 $gutter-width;
+    p {
+        margin-bottom: 0;
+    }
+}
+
 .footer--sponsors {
     @extend .fullpage-section;
     h2 {
         font-size: 1.333333333em;
         font-weight: 700;
+        color: $colour_black !important;
     }
 }
 
@@ -611,4 +925,68 @@ p + p {
     padding: 1.5em;
     border: 1px solid #e9e9e9;
     margin-bottom: 1.5em;
+}
+
+.stars {
+    background-image: url('../img/stars.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 51px 24px;
+}
+
+.list-of-news-posts {
+    @include unstyled-list;
+}
+
+.news-post--in-list {
+    border-bottom: 1px solid $colour_borders;
+    padding: $gutter-width 0;
+     p,
+    ul,
+    ol {
+        max-width: 36em;
+    }
+    h1 {
+        @extend .secondary-heading;
+    }
+    h2 {
+        @extend .tertiary-heading;
+    }
+    h3 {
+        @extend .quarternary-heading;
+    }
+}
+
+.news-post-content {
+    margin: $gutter-width * 2 0;
+    border-bottom: 1px solid $colour_borders;
+    padding-bottom: $gutter-width * 2;
+    font-size: 1.166666667em;
+    line-height: 1.5em;
+    h1 {
+        a {
+            color: $colour_black;
+            display: inline-block;
+        }
+    }
+    p,
+    ul,
+    ol {
+        max-width: 36em;
+    }
+}
+
+.news-post__date {
+    color: $colour_grey;
+}
+
+.breadcrumb {
+    color: $colour_borders;
+    margin-bottom: 1em;
+    a {
+        padding: 0 0.5em;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
 }

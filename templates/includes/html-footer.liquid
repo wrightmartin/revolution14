@@ -1,0 +1,16 @@
+        {{ "modernizer.min.js" | asset_url | script_tag }}
+        {{ "svgeezy.min.js" | asset_url | script_tag }}
+        {{ "responsive-nav.min.js" | asset_url | script_tag }}
+        {{ "fitvids.min.js" | asset_url | script_tag }}
+        <script>
+            svgeezy.init('nocheck', 'png');
+        </script>
+        <script>
+          $(document).ready(function(){
+            // Target your .container, .wrapper, .post, etc.
+            $(".welcome-back__video").fitVids();
+          });
+        </script>
+        <script>
+            var nav = responsiveNav(".nav-collapse");
+        </script>

@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
         <!-- Title block allowing child pages to override -->
-        <title>{% block title %}{% endblock %} &ndash; Shropgeek (R)evolution 2014</title>
+        <title>{% block title %}News{% endblock %} &ndash; Shropgeek (R)evolution 2014</title>
         {% include "html-head" %}
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
@@ -13,10 +13,13 @@
           <div class="wrapper">
         {% endblock %}
 
+        <div class="news-post-content">
+            <div class="breadcrumb">
+                <a href="/">Home</a>/<a href="/news">News</a> /
+            </div>
             <!-- Content block, child page inject content -->
             {% block content %}{% endblock %}
-
-
+        </div>
         {% block close-wrapper %}
           </div>
         {% endblock %}

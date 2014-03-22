@@ -4,13 +4,13 @@
     <ul class="quick-event-details header--pre_links-list">
       <li>Friday, 26 September 2014</li>
       <li>Shropshire Conference Centre, Shrewsbury</li>
-      <li><a href="#">#Revolutionconf</a></li>
+      <li><a href="#" class="hashtag">#Revolutionconf</a></li>
     </ul>
     <div class="quick-navigation-position">
      <ul class="secondary-links-menu header--pre_links-list nav__menu">
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="tickets-button">Tickets</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="mailto:revolution@shropgeek.co.uk">Contact</a></li>
+          <li><a href="/tickets" class="tickets-button">Tickets</a></li>
       </ul>
     </div>
 
@@ -27,35 +27,35 @@
                 {% if mixture.url == "about" %}
                     class="current"
                 {% endif %}>
-                <a href="about">about</a>
+                <a href="/about">About</a>
               </li>
               <li
                 {% if mixture.url == "speakers" %}
                     class="current"
                 {% endif %}>
-                <a href="speakers">Speakers</a>
+                <a href="/speakers">Speakers</a>
               </li>
               <li
                 {% if mixture.url == "schedule" %}
                     class="current"
                 {% endif %}>
-                <a href="schedule">Schedule</a>
+                <a href="/schedule">Schedule</a>
               </li>
               <li
                 {% if mixture.url == "location" %}
                     class="current"
                 {% endif %}>
-                <a href="location">Location</a>
+                <a href="/location">Location</a>
               </li>
               <li
                 {% if mixture.url == "fringe" %}
                     class="current"
                 {% endif %}>
-                <a href="fringe">Fringe</a>
+                <a href="/fringe">Fringe</a>
               </li>
-              <li class="secondary-link"><a href="#">News</a></li>
-              <li class="secondary-link"><a href="#">Contact</a></li>
-              <li class="secondary-link"><a href="#" class="tickets-button">Tickets</a></li>
+              <li class="secondary-link"><a href="/news">News</a></li>
+              <li class="secondary-link"><a href="/contact">Contact</a></li>
+              <li class="secondary-link"><a href="/tickets" class="tickets-button">Tickets</a></li>
             </ul>
           </nav>
         </div>

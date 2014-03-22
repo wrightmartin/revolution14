@@ -338,7 +338,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.image-replacement, .site-logo h1, .nav-toggle {
+.image-replacement, .site-logo h1, .nav-toggle, .shropgeek-logo, .fifth-year {
   text-indent: -1000%;
   white-space: nowrap;
   overflow: hidden; }
@@ -384,14 +384,12 @@ a {
     text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.5em;
+  margin-top: 0;
   margin-bottom: 0.5em;
   line-height: 1.1em;
   text-rendering: optimizeLegibility;
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif; }
-
-h4, h5, h6 {
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif; }
+  font-family: "futura-pt", "Helvetica Neue", Arial, Helvetica, serif;
+  text-transform: uppercase; }
 
 img {
   max-width: 100%; }
@@ -402,17 +400,21 @@ h1,
   font-weight: 700; }
 
 h2,
-.secondary-heading {
+.secondary-heading,
+.news-post--in-list h1 {
   font-size: 2.333333333em;
   font-weight: 700; }
 
 h3,
-.tertiary-heading {
+.tertiary-heading,
+.news-post--in-list h2 {
   font-size: 1.333333333em;
-  font-weight: 600; }
+  font-weight: 500;
+  font-family: "futura-pt-condensed", "Arial Narrow", sans-serif; }
 
 h4,
-.quarternary-heading {
+.quarternary-heading,
+.news-post--in-list h3 {
   font-size: 1.125em;
   font-weight: 700; }
 
@@ -431,11 +433,13 @@ h6,
 
 p {
   font-size: 1em;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em; }
-
-p + p {
+  margin-bottom: 1em;
   margin-top: 0; }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1.5em;
+  border-left: 3px solid #c1503e; }
 
 .wrapper {
   position: relative;
@@ -527,7 +531,9 @@ p + p {
     width: 5.55em;
     height: 1.416666667em;
     display: inline-block;
-    background-image: url("../img/2014-logo.svg"); }
+    background-image: url("../img/2014-logo.svg");
+    background-position: top left;
+    background-repeat: no-repeat; }
 
 @media (min-width: 64em) {
   .navigation-position {
@@ -564,18 +570,18 @@ p + p {
         padding: 0; } }
 
 .primary-links-menu {
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif;
+  font-family: "futura-pt", "Helvetica Neue", Arial, Helvetica, serif;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-left: 0;
   padding-left: 0;
-  list-style: none outside none; }
+  list-style: none outside none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px; }
   @media (min-width: 64em) {
     .primary-links-menu {
       border-top: none;
-      text-transform: uppercase;
       font-size: .888888889em;
-      letter-spacing: 1px;
-      font-weight: 700;
       text-align: right; } }
   .primary-links-menu a {
     display: block;
@@ -586,6 +592,24 @@ p + p {
   .secondary-link {
     display: none !important;
     visibility: hidden; } }
+
+.secondary-links-menu a {
+  position: relative;
+  top: -1em; }
+
+@media (min-width: 64em) {
+  .nav__menu .tickets-button {
+    background-color: #fff;
+    color: #c1503e;
+    padding: 1em;
+    display: inline-block; } }
+
+.hashtag {
+  font-family: "futura-pt-condensed", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.3em;
+  line-height: 1em; }
 
 /*! responsive-nav.js 1.0.31 by @viljamis */
 .js .nav-collapse {
@@ -603,7 +627,7 @@ p + p {
   pointer-events: none !important; }
 
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -651,6 +675,21 @@ p + p {
   .footer--site-footer a {
     color: #caa75b; }
 
+.footer--site-footer__grid-row {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .footer--site-footer__grid-row:before, .footer--site-footer__grid-row:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .footer--site-footer__grid-row:after {
+    clear: both; }
+  .footer--site-footer__grid-row {
+    *zoom: 1; }
+
 @media (min-width: 41.875em) {
   .footer--site-footer__grid-unit-about {
     float: left;
@@ -667,6 +706,15 @@ p + p {
     margin-left: 25%; }
     .footer--site-footer__grid-unit-links:first-child {
       padding-left: 0; } }
+
+.shropgeek-logo {
+  display: inline-block;
+  background-image: url("../img/shropgeek.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 200px 153px;
+  height: 153px;
+  width: 200px; }
 
 .about-shropgeek {
   /**
@@ -688,6 +736,8 @@ p + p {
     margin-right: 1em; }
   .about-shropgeek > :last-child {
     overflow: hidden; }
+  .about-shropgeek p {
+    font-size: 0.888888889em; }
 
 .site-footer__links-list {
   width: 50%;
@@ -696,15 +746,14 @@ p + p {
     margin-left: 0;
     padding-left: 0;
     list-style: none outside none;
-    font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif;
+    font-family: "futura-pt", "Helvetica Neue", Arial, Helvetica, serif;
     margin: 0; }
   .site-footer__links-list a {
-    font-size: 0.777777778em; }
+    font-size: 0.777777778em;
+    text-transform: uppercase;
+    font-weight: 700; }
   .site-footer__links-list h3 {
     font-size: 0.77778em; }
-
-.about-shropgeek p {
-  font-size: 0.888888889em; }
 
 .grid {
   width: 100%;
@@ -736,13 +785,36 @@ p + p {
       padding-bottom: 5em; } }
   .hero h1 {
     color: #c1503e;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 0; }
   .hero .subtitle {
     text-align: center;
     font-size: 1.277777778em;
     line-height: 1.5em;
     max-width: 29em;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-bottom: 1.4em; }
+
+.hero-homepage {
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 4em; }
+
+.hero--border {
+  border-bottom: 1px solid #e9e9e9; }
+
+.small-heading {
+  color: #333333 !important;
+  font-size: 1.5em;
+  background-image: none !important; }
+
+.fifth-year {
+  width: 70%;
+  height: 160px;
+  display: block;
+  background-image: url("../img/fifth-year.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 auto; }
 
 .hero--short {
   padding-top: 2em;
@@ -752,59 +824,60 @@ p + p {
       padding-top: 3em;
       padding-bottom: 3em; } }
 
-.fullpage-section, .speakers, .welcome-back, .whats-included, .who-is-it-for, .footer--sponsors {
+.fullpage-section, .speakers, .welcome-back, .whats-included, .who-is-it-for, .location__conference-centre, .location__shrewsbury, .footer--sponsors {
   /**
    * For IE 6/7 only
    * Include this rule to trigger hasLayout and contain floats.
    */
   border-bottom: 1px solid #e9e9e9;
   padding: 5em 0; }
-  .fullpage-section:before, .speakers:before, .welcome-back:before, .whats-included:before, .who-is-it-for:before, .footer--sponsors:before, .fullpage-section:after, .speakers:after, .welcome-back:after, .whats-included:after, .who-is-it-for:after, .footer--sponsors:after {
+  .fullpage-section:before, .speakers:before, .welcome-back:before, .whats-included:before, .who-is-it-for:before, .location__conference-centre:before, .location__shrewsbury:before, .footer--sponsors:before, .fullpage-section:after, .speakers:after, .welcome-back:after, .whats-included:after, .who-is-it-for:after, .location__conference-centre:after, .location__shrewsbury:after, .footer--sponsors:after {
     content: " ";
     /* 1 */
     display: table;
     /* 2 */ }
-  .fullpage-section:after, .speakers:after, .welcome-back:after, .whats-included:after, .who-is-it-for:after, .footer--sponsors:after {
+  .fullpage-section:after, .speakers:after, .welcome-back:after, .whats-included:after, .who-is-it-for:after, .location__conference-centre:after, .location__shrewsbury:after, .footer--sponsors:after {
     clear: both; }
-  .fullpage-section, .speakers, .welcome-back, .whats-included, .who-is-it-for, .footer--sponsors {
+  .fullpage-section, .speakers, .welcome-back, .whats-included, .who-is-it-for, .location__conference-centre, .location__shrewsbury, .footer--sponsors {
     *zoom: 1; }
-  .fullpage-section .wrapper > h2, .speakers .wrapper > h2, .welcome-back .wrapper > h2, .whats-included .wrapper > h2, .who-is-it-for .wrapper > h2, .footer--sponsors .wrapper > h2 {
+  .fullpage-section .wrapper > h2, .speakers .wrapper > h2, .welcome-back .wrapper > h2, .whats-included .wrapper > h2, .who-is-it-for .wrapper > h2, .location__conference-centre .wrapper > h2, .location__shrewsbury .wrapper > h2, .footer--sponsors .wrapper > h2 {
     text-align: center;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    color: #c1503e; }
 
 .speakers {
   padding: 0 0 1.5em; }
 
 @media (min-width: 41.875em) and (max-width: 64em) {
-  .grid-unit--speaker {
+  .grid-unit--speaker--preview {
     display: inline-block;
     margin-left: 3%;
     vertical-align: top;
     width: 48.5%; }
-    .grid-unit--speaker:first-child {
+    .grid-unit--speaker--preview:first-child {
       margin-left: 0; }
-    .grid-unit--speaker:nth-child(odd) {
+    .grid-unit--speaker--preview:nth-child(odd) {
       margin-left: 0; } }
 @media (min-width: 64em) {
-  .grid-unit--speaker {
+  .grid-unit--speaker--preview {
     display: inline-block;
     margin-left: 3%;
     vertical-align: top;
     width: 22.75%; }
-    .grid-unit--speaker:first-child {
+    .grid-unit--speaker--preview:first-child {
       margin-left: 0; }
-    .grid-unit--speaker:nth-child(5) {
+    .grid-unit--speaker--preview:nth-child(5) {
       margin-left: 0; } }
 
-.speaker {
+.speaker--preview {
   text-align: center;
   margin-bottom: 3.5em; }
 
-.speaker__name {
+.speaker--preview__name {
   font-size: 1.333333333em;
   font-weight: 600; }
 
-.speaker__meta {
+.speaker--preview__meta {
   font-size: 0.833333333em;
   line-height: 1.5em;
   margin-bottom: 0; }
@@ -957,8 +1030,7 @@ p + p {
   /**
    * For IE 6/7 only
    * Include this rule to trigger hasLayout and contain floats.
-   */
-  border-bottom: 1px solid #e9e9e9; }
+   */ }
   .big-schedule-list:before, .big-schedule-list:after {
     content: " ";
     /* 1 */
@@ -976,7 +1048,7 @@ p + p {
    */
   padding-top: 2em;
   padding-bottom: 2em;
-  border-top: 1px solid #e9e9e9; }
+  border-bottom: 1px solid #e9e9e9; }
   .schedule-item:before, .schedule-item:after {
     content: " ";
     /* 1 */
@@ -988,30 +1060,30 @@ p + p {
     *zoom: 1; }
 
 @media (min-width: 41.875em) {
-  .schedule-column--time {
+  .schedule-unit--time {
     float: left;
     padding-left: 3%;
     width: 16.666666667%; }
-    .schedule-column--time:first-child {
+    .schedule-unit--time:first-child {
       padding-left: 0; } }
 
 @media (min-width: 41.875em) {
-  .schedule-column--entry {
+  .schedule-unit--entry {
     float: left;
     padding-left: 3%;
     width: 83.333333335%; }
-    .schedule-column--entry:first-child {
+    .schedule-unit--entry:first-child {
       padding-left: 0; } }
 @media (min-width: 64em) {
-  .schedule-column--entry {
+  .schedule-unit--entry {
     float: left;
     padding-left: 3%;
     width: 50%; }
-    .schedule-column--entry:first-child {
+    .schedule-unit--entry:first-child {
       padding-left: 0; } }
 
 .schedule__time {
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif;
+  font-family: "futura-pt", "Helvetica Neue", Arial, Helvetica, serif;
   margin-bottom: 1em; }
 
 .meridian {
@@ -1019,7 +1091,6 @@ p + p {
 
 .schedule__agenda-name {
   font-size: 1.166666667em;
-  font-weight: 400;
   margin-top: 0; }
 
 .schedule__speaker-name {
@@ -1027,15 +1098,335 @@ p + p {
   margin-top: 0; }
 
 .schedule__talk-title {
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, serif;
+  font-family: "futura-pt", "Helvetica Neue", Arial, Helvetica, serif;
+  font-weight: 700;
   font-size: 1em; }
 
 .schedule__description {
   color: #777777; }
 
+.speaker {
+  border-bottom: 1px solid #e9e9e9;
+  padding: 2em 0 4em; }
+
+.speaker__details {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .speaker__details:before, .speaker__details:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .speaker__details:after {
+    clear: both; }
+  .speaker__details {
+    *zoom: 1; }
+
+@media (min-width: 64em) {
+  .speaker-unit--metadata {
+    float: left;
+    padding-left: 3%;
+    width: 16.666666667%; }
+    .speaker-unit--metadata:first-child {
+      padding-left: 0; } }
+
+@media (min-width: 41.875em) {
+  .speaker-unit--description {
+    float: left;
+    padding-left: 3%;
+    width: 75%;
+    padding-left: 0; }
+    .speaker-unit--description:first-child {
+      padding-left: 0; } }
+@media (min-width: 64em) {
+  .speaker-unit--description {
+    float: left;
+    padding-left: 3%;
+    width: 58.333333331%; }
+    .speaker-unit--description:first-child {
+      padding-left: 0; } }
+
+.speaker-unit--photo {
+  margin-top: 2em; }
+  @media (min-width: 41.875em) {
+    .speaker-unit--photo {
+      float: left;
+      padding-left: 3%;
+      width: 25%;
+      margin-top: 0; }
+      .speaker-unit--photo:first-child {
+        padding-left: 0; } }
+  @media (min-width: 64em) {
+    .speaker-unit--photo {
+      float: left;
+      padding-left: 3%;
+      width: 25%; }
+      .speaker-unit--photo:first-child {
+        padding-left: 0; } }
+
+.speaker__metadata {
+  margin-bottom: 1em; }
+  .speaker__metadata ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none outside none;
+    margin-top: 0; }
+    @media (max-width: 64em) {
+      .speaker__metadata ul {
+        margin-left: -0.5em;
+        margin-bottom: 0; }
+        .speaker__metadata ul li {
+          display: inline-block;
+          margin-left: 0.5em; }
+        .speaker__metadata ul li:before {
+          content: ' / ';
+          padding-right: 0.66em;
+          color: #e9e9e9; }
+        .speaker__metadata ul li:first-child:before {
+          content: '';
+          padding-right: 0; } }
+
+.speaker__description {
+  margin-right: 7%; }
+  .speaker__description p:first-child {
+    margin-top: 0; }
+
+/* Location */
+.location__conference-centre {
+  padding-top: 0; }
+
+.conference-centre--grid-row {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  max-width: 1000px;
+  margin: 0 auto; }
+  .conference-centre--grid-row:before, .conference-centre--grid-row:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .conference-centre--grid-row:after {
+    clear: both; }
+  .conference-centre--grid-row {
+    *zoom: 1; }
+
+@media (min-width: 41.875em) {
+  .conference-centre--grid-unit {
+    float: left;
+    padding-left: 3%;
+    width: 50%; }
+    .conference-centre--grid-unit:first-child {
+      padding-left: 0; } }
+
+.map {
+  position: relative;
+  margin-bottom: 4em; }
+
+.map-canvas {
+  width: 100%;
+  min-height: 600px;
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .map-canvas:before, .map-canvas:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .map-canvas:after {
+    clear: both; }
+  .map-canvas {
+    *zoom: 1; }
+
+.conference-centre-info {
+  background: #caa75b;
+  color: #fff;
+  z-index: 300;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  max-width: 100%;
+  -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.35s ease-in;
+  -moz-transition: all 0.35s ease-in;
+  -o-transition: all 0.35s ease-in;
+  -ms-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in; }
+  .conference-centre-info:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -13px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #caa75b; }
+  .conference-centre-info a {
+    color: #e9dbbb;
+    font-family: "futura-pt", "Helvetica Neue", Arial, Helvetica, serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75em; }
+    .conference-centre-info a:hover, .conference-centre-info a:active, .conference-centre-info a:focus {
+      color: #fff; }
+  .conference-centre-info img {
+    line-height: 1em; }
+  .conference-centre-info .vcard {
+    padding: .5em 4% 1em; }
+    .conference-centre-info .vcard .street-address span {
+      display: block; }
+  .conference-centre-info .visible {
+    opacity: 1;
+    top: 5.5em; }
+
+#directionsPanel {
+  position: absolute;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 5;
+  background-color: white;
+  display: none; }
+
+@media (min-width: 41.875em) {
+  .map {
+    min-height: 400px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+    .map .conference-centre-info {
+      max-width: 15em;
+      top: 3em;
+      left: 145px;
+      left: 50%;
+      margin-left: -7.5em; } }
+.location__shrewsbury {
+  padding-top: 0; }
+
+.shrewsbury__photo-bg {
+  background-image: url("../img/shrewsbury.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .shrewsbury__photo-bg:before, .shrewsbury__photo-bg:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .shrewsbury__photo-bg:after {
+    clear: both; }
+  .shrewsbury__photo-bg {
+    *zoom: 1; }
+
+.shrewsbury__photo__block {
+  background-color: #c1503e;
+  color: #fff;
+  padding: 2em;
+  max-width: 22em;
+  margin: 0 auto; }
+  @media (min-width: 41.875em) {
+    .shrewsbury__photo__block {
+      margin: 2em 3em 2em 0;
+      float: right; } }
+
+.shrewsbury__grid-row {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .shrewsbury__grid-row:before, .shrewsbury__grid-row:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .shrewsbury__grid-row:after {
+    clear: both; }
+  .shrewsbury__grid-row {
+    *zoom: 1; }
+
+.shrewsbury__travel {
+  padding: 4em 0;
+  border-bottom: 1px solid #e9e9e9; }
+
+@media (min-width: 41.875em) {
+  .shrewsbury__travel--grid-unit {
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: top;
+    width: 30.666666667%; }
+    .shrewsbury__travel--grid-unit:first-child {
+      margin-left: 0; }
+    .shrewsbury__travel--grid-unit:nth-child(4) {
+      margin-left: 0; } }
+
+@media (min-width: 41.875em) {
+  .push-top {
+    margin-top: 2.8em; } }
+
+.shrewsbury__accomodation {
+  padding: 4em 0 0; }
+
+@media (max-width: 41.875em) {
+  .shrewsbury__accomodation--grid-unit {
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: top;
+    width: 48.5%; }
+    .shrewsbury__accomodation--grid-unit:first-child {
+      margin-left: 0; }
+    .shrewsbury__accomodation--grid-unit:nth-child(odd) {
+      margin-left: 0; } }
+@media (min-width: 41.875em) and (max-width: 64em) {
+  .shrewsbury__accomodation--grid-unit {
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: top;
+    width: 30.666666667%; }
+    .shrewsbury__accomodation--grid-unit:first-child {
+      margin-left: 0; }
+    .shrewsbury__accomodation--grid-unit:nth-child(4) {
+      margin-left: 0; } }
+@media (min-width: 64em) {
+  .shrewsbury__accomodation--grid-unit {
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: top;
+    width: 17.6%; }
+    .shrewsbury__accomodation--grid-unit:first-child {
+      margin-left: 0; }
+    .shrewsbury__accomodation--grid-unit:nth-child(6) {
+      margin-left: 0; } }
+
+.hotel {
+  margin: 1em 0 2em; }
+  .hotel p {
+    margin-bottom: 0; }
+
 .footer--sponsors h2 {
   font-size: 1.333333333em;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #333333 !important; }
 
 .footer--sponsors__grid-row {
   /**
@@ -1078,3 +1469,47 @@ p + p {
   padding: 1.5em;
   border: 1px solid #e9e9e9;
   margin-bottom: 1.5em; }
+
+.stars, .hero .subtitle {
+  background-image: url("../img/stars.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 51px 24px; }
+
+.list-of-news-posts {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none outside none; }
+
+.news-post--in-list {
+  border-bottom: 1px solid #e9e9e9;
+  padding: 2em 0; }
+  .news-post--in-list p,
+  .news-post--in-list ul,
+  .news-post--in-list ol {
+    max-width: 36em; }
+
+.news-post-content {
+  margin: 4em 0;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 4em;
+  font-size: 1.166666667em;
+  line-height: 1.5em; }
+  .news-post-content h1 a {
+    color: #333333;
+    display: inline-block; }
+  .news-post-content p,
+  .news-post-content ul,
+  .news-post-content ol {
+    max-width: 36em; }
+
+.news-post__date {
+  color: #777777; }
+
+.breadcrumb {
+  color: #e9e9e9;
+  margin-bottom: 1em; }
+  .breadcrumb a {
+    padding: 0 0.5em; }
+    .breadcrumb a:first-child {
+      padding-left: 0; }

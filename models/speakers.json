@@ -3,16 +3,44 @@
   "speaker": [
     {
       "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": ["Headscape", "Boagworld", "Twitter"],
-      "personal_url": "http://headscape.co.uk",
-      "photo": "paul-boag.jpg"
+      "organisations": [
+        [
+          {
+            "name": "Headscape",
+            "url": "http://www.headscape.co.uk"
+          },
+          {
+            "name": "Boagworld",
+            "url": "http://www.boagworld.co.uk"
+          }
+        ]
+      ],
+      "photo": "paul-boag.jpg",
+      "description": "<p>Paul Boag has been working with the web since 1994. He is now co-founder of the digital agency Headscape, where he works closely with clients to establish their web strategy.</p><p>Paul is a prolific writer having written Digital Adaptation, Website Owners Manual, Client Centric Web Design and numerous articles for publications such as .net magazine, Smashing Magazine and the econsultancy.com.</p><p>Paul also speaks extensively on various aspects of web design both at conferences across the world and on his award winning web design podcast boagworld.</p>",
+      "bookmark_link": "paul-boag",
+      "talk_title": "Digital Adaptation: Time to Untie Your Hands",
+      "talk_description": "<p>Do you feel like you are doing your job with one hand tied behind your back? Are you frustrated by company practices that are horribly antiquated and inappropriate for the digital world? Does your boss or client fail to understand the unique characteristics of the web? If so, you are not alone. The majority of traditional businesses are struggling to adapt to the digital economy and need your help even if they don't realize it.</p><p>In his talk, Paul explains why this is, and what we (as the web community) can do about it. He highlights that to build a great website, we have to be the catalyst for organizational change and recommends ways to start make it happening.</p><p>Things you will learn include</p><ul><li>Why so many organisations are failing to adapt</li><li>Why it falls to you to instigate the change in company culture</li><li>Practical ways of instigating change</li><li> Why your primary job isn't to build websites, despite what your boss or client might think</li></ul>",
+      "talk_time": "09:30am"
     },
     {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
+      "name": "Rachel Andrew",
+      "organisations": [
+        [
+          {
+            "name": "edgeofmyseat.com",
+            "url": "http://edgeofmyseat.com"
+          },
+          {
+            "name": "Perch",
+            "url": "http://www.grabaperch.com"
+          }
+        ]
+      ],
+      "photo": "rachel-andrew.jpg",
+      "description": "<p>Rachel Andrew is a web developer, writer, speaker and one half of edgeofmyseat.com - the company behind the CMS Perch. She has been working on the web since the late 90s and running her own company since 2001.</p><p>When not working on her own product, Rachel enjoys helping other people transition from consultancy and client services to profitable product businesses - without needing to seek investment or risk everything by “doing a startup”.</p>",
+      "bookmark_link": "rachel-andrew",
+      "talk_title":"The Profitable Side Project",
+      "talk_description":""
     },
     {
       "name": "Paul Boag",

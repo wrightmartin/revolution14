@@ -1,8 +1,88 @@
-{% model "speakers.json" %}
-{% block open-wrapper %}
-{% endblock %}
-{% block content %}
-<div class="hero hero--short hero--border">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Title block allowing child pages to override -->
+        <title>Shropgeek (R)evolution 2014</title>
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.png" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/hxk1zsi.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <!-- Styles -->
+        <link href="assets/css/global.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <!-- Style block allowing child pages to inject their own styles -->
+        
+    </head>
+    <body>
+        
+<header class="header header--pre">
+  <div class="wrapper">
+    <ul class="quick-event-details header--pre_links-list">
+      <li>Friday, 26 September 2014</li>
+      <li>Shropshire Conference Centre, Shrewsbury</li>
+      <li><a href="#">#Revolutionconf</a></li>
+    </ul>
+    <div class="quick-navigation-position">
+     <ul class="secondary-links-menu header--pre_links-list nav__menu">
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="tickets-button">Tickets</a></li>
+      </ul>
+    </div>
+
+  </div>
+</header>
+
+<header class="header header--site">
+    <div class="wrapper">
+        <a href="index.html" class="site-logo"><h1>(R)evolution</h1></a>
+        <div class="navigation-position">
+          <nav class="site-nav nav-collapse" role="navigation">
+            <ul class="primary-links-menu nav__menu">
+              <li
+                >
+                <a href="about">about</a>
+              </li>
+              <li
+                >
+                <a href="speakers.html">Speakers</a>
+              </li>
+              <li
+                
+                    class="current"
+                >
+                <a href="schedule.html">Schedule</a>
+              </li>
+              <li
+                >
+                <a href="location.html">Location</a>
+              </li>
+              <li
+                >
+                <a href="fringe">Fringe</a>
+              </li>
+              <li class="secondary-link"><a href="#">News</a></li>
+              <li class="secondary-link"><a href="#">Contact</a></li>
+              <li class="secondary-link"><a href="#" class="tickets-button">Tickets</a></li>
+            </ul>
+          </nav>
+        </div>
+
+    </div>
+</header>
+
+
+        
+
+
+            <!-- Content block, child page inject content -->
+            
+<div class="hero hero--short">
     <div class="wrapper">
         <h1>The day ahead</h1>
         <p class="subtitle">Yep, a conference schedule</p>
@@ -40,20 +120,17 @@
         <li class="schedule-item">
             <div class="schedule-unit--time">
                 <div class="schedule__time">
-                    9:30<span class="meridian">am</span>
+                9:30<span class="meridian">am</span>
                 </div>
             </div>
-            {% for speaker in model.speaker limit:1 offset:0 %}
             <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name">
-                    <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
-                </h2>
-                <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
+                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                <p class="schedule__talk-title">The title of the talk</p>
                 <div class="schedule__description">
-                    {{ speaker.talk_description }}
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
-            {% endfor %}
         </li>
         <li class="schedule-item">
             <div class="schedule-unit--time">
@@ -61,17 +138,14 @@
                 10:15<span class="meridian">am</span>
                 </div>
             </div>
-            {% for speaker in model.speaker limit:1 offset:1 %}
             <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name">
-                    <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
-                </h2>
-                <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
+                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                <p class="schedule__talk-title">The title of the talk</p>
                 <div class="schedule__description">
-                    {{ speaker.talk_description }}
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
-            {% endfor %}
         </li>
         <li class="schedule-item">
             <div class="schedule-unit--time">
@@ -218,6 +292,97 @@
      </ol>
     </div>
 </div>
-{% endblock %}
-{% block close-wrapper %}
-{% endblock %}
+
+
+        
+
+        <footer class="footer footer--sponsors">
+    <div class="wrapper">
+        <h2>With support from</h2>
+        <div class="footer--sponsors__grid-row">
+            <div class="footer--sponsors__grid-unit">
+                <div class="sponsor-thumb">
+                    <a href="#">
+                        <img src="http://placehold.it/210x85" alt="" />
+                    </a>
+                </div>
+            </div><!--
+            --><div class="footer--sponsors__grid-unit">
+                <div class="sponsor-thumb">
+                    <a href="#">
+                        <img src="http://placehold.it/210x85" alt="" />
+                    </a>
+                </div>
+            </div><!--
+            --><div class="footer--sponsors__grid-unit">
+                <div class="sponsor-thumb">
+                    <a href="#">
+                        <img src="http://placehold.it/210x85" alt="" />
+                    </a>
+                </div>
+            </div><!--
+            --><div class="footer--sponsors__grid-unit">
+                <div class="sponsor-thumb">
+                    <a href="#">
+                        <img src="http://placehold.it/210x85" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="footer footer--site-footer">
+    <div class="wrapper">
+        <div class="footer--site-footer__grid-row">
+            <div class="footer--site-footer__grid-unit-about">
+                <div class="about-shropgeek">
+                    <img src="http://placehold.it/200x200" alt="" />
+                    <div>
+                    <p>We are a collection of like minded people based in and around Shropshire; who like to meet regularly to catchup on the latest goings on and socialise with fellow geeks.</p>
+                    </div>
+                </div>
+            </div><!--
+            --><div class="footer--site-footer__grid-unit-links">
+                <div class="site-footer__links-list">
+                    <ul>
+                        <li><a href="#">Sponsors</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Refunds</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__links-list">
+                <h3>Previously</h3>
+                    <ul>
+                        <li><a href="#">2013</a></li>
+                        <li><a href="#">2012</a></li>
+                        <li><a href="#">2011</a></li>
+                        <li><a href="#">2010</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        
+        <script src="assets/scripts/modernizer.min.js"></script>
+        <script src="assets/scripts/svgeezy.min.js"></script>
+        <script src="assets/scripts/responsive-nav.min.js"></script>
+        <script src="assets/scripts/fitvids.min.js"></script>
+        <script>
+            svgeezy.init('nocheck', 'png');
+        </script>
+        <script>
+          $(document).ready(function(){
+            // Target your .container, .wrapper, .post, etc.
+            $(".welcome-back__video").fitVids();
+          });
+        </script>
+        <script>
+            var nav = responsiveNav(".nav-collapse");
+        </script>
+    </body>
+</html>
