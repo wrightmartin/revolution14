@@ -437,6 +437,7 @@ blockquote {
     font-size: 1.5em;
     background-image: none !important;
 }
+
 .fifth-year {
     width: 70%;
     height: 160px;
@@ -447,6 +448,7 @@ blockquote {
     background-repeat: no-repeat;
     margin: 0 auto;
 }
+
 .hero--short {
     padding-top: $gutter-width;
     padding-bottom: $gutter-width;
@@ -455,6 +457,7 @@ blockquote {
         padding-bottom: $gutter-width*1.5;
     }
 }
+
 .fullpage-section {
     @include clearfix;
     border-bottom: 1px solid $colour_borders;
@@ -564,6 +567,7 @@ blockquote {
 .who-is-it-for {
     @extend .fullpage-section;
     background-color: #f4f4f4;
+    border-bottom: none;
 }
 
 .who-is-it-for__grid-row {
@@ -593,6 +597,9 @@ blockquote {
     padding-top: 2em;
     padding-bottom: 2em;
     border-bottom: 1px solid $colour_borders;
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 .schedule-unit--time {
@@ -633,8 +640,7 @@ blockquote {
 }
 
 .schedule__talk-title {
-    font-family: $futura;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1em;
 }
 
@@ -645,6 +651,9 @@ blockquote {
 .speaker {
     border-bottom: 1px solid $colour_borders;
     padding: $gutter-width 0 $gutter-width * 2;
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 .speaker__details {
@@ -825,6 +834,7 @@ blockquote {
 .location__shrewsbury {
     @extend .fullpage-section;
     padding-top: 0;
+    border-bottom: none;
 }
 
 .shrewsbury__photo-bg {
@@ -897,6 +907,7 @@ blockquote {
 
 .footer--sponsors {
     @extend .fullpage-section;
+    border-top: 1px solid $colour_borders;
     h2 {
         font-size: 1.333333333em;
         font-weight: 700;
@@ -941,7 +952,10 @@ blockquote {
 .news-post--in-list {
     border-bottom: 1px solid $colour_borders;
     padding: $gutter-width 0;
-     p,
+    &:last-child {
+        border-bottom: none;
+    }
+    p,
     ul,
     ol {
         max-width: 36em;
@@ -990,3 +1004,118 @@ blockquote {
         }
     }
 }
+
+.about__content {
+    padding-top: $gutter-width * 2;
+}
+
+
+.about__grid-row {
+    @include grid-row;
+}
+
+.about__blurb-grid-unit {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--two-thirds;
+    }
+}
+
+.about__team {
+    padding: $gutter-width * 2 0;
+    margin-top: $gutter-width * 2;
+    border-top: 1px solid $colour_borders;
+}
+
+.about__team__team-grid-unit {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+    }
+}
+
+.about__team__list {
+    @include unstyled-list;
+}
+
+.about__team__list__item {
+    @media (min-width: $medium-screen) {
+        @include grid-column--block;
+        @include block-grid-third;
+    }
+
+}
+
+.person {
+    margin-bottom: $gutter-width;
+    margin-right: $gutter-width;
+    img {
+        max-width: 72px;
+    }
+}
+.person__name {
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+.person__link {
+    font-size: 0.777777778em;
+    line-height:1.5em;
+    margin: 0;
+    a {
+        color: $colour_grey;
+        text-decoration: underline;
+         @include hoverActiveFocus{
+            color: $colour_red;
+        }
+    }
+}
+
+.person__description {
+    font-size: 0.888888889em;
+    line-height: 1.5em;
+    margin-top: 1em;
+}
+
+
+.about__team__volunteers-grid-unit {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--two-thirds;
+    }
+}
+
+.about__team__credits-grid-unit {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--third;
+    }
+}
+
+.media-block {
+    @include media-block;
+}
+
+.volunteers__list {
+    @include unstyled-list;
+    @media (min-width: $medium-screen) {
+        @include columns(3);
+    }
+    @media (min-width: $large-screen) {
+        @include columns(3);
+    }
+
+    li {
+        margin-bottom: $gutter-width / 1.5;
+    }
+    .person__name {
+        font-weight: normal;
+        font-size: 0.888888889em;
+    }
+}
+
+.volunteer {
+    img {
+        max-width: 54px;
+    }
+}
+
+@import 'owl.carousel';

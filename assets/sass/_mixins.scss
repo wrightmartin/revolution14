@@ -129,6 +129,10 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
     width: 33.3333333%;
 }
 
+@mixin grid-column--two-thirds {
+    width: 66.666666666%;
+}
+
 @mixin grid-column--three-quarters {
     width: 75%;
 }
@@ -180,4 +184,11 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
     &:nth-child(odd) {
         margin-left: 0;
     }
+}
+
+@mixin columns($count:2) {
+    -webkit-column-count: $count;
+    -moz-column-count: $count;
+    -o-column-count: $count;
+    column-count: $count;
 }
