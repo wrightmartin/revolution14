@@ -1,0 +1,54 @@
+{% block title %}Sponsors{% endblock %}
+{% block open-wrapper %}
+{% endblock %}
+{% block content %}
+<div class="faqs">
+    <div class="hero hero--short hero--border">
+        <div class="wrapper">
+            <h1>FAQs</h1>
+            <p class="subtitle">Frequently asked questions</p>
+        </div>
+    </div>
+
+    <div class="faqs__content">
+        <div class="wrapper">
+            <h2>A question</h2>
+            <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+            <h2>A question</h2>
+            <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+            <h2>A question</h2>
+            <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+            <h2>A question</h2>
+            <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+            <h2>A question</h2>
+            <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+            <h2>A question</h2>
+            <p>We're excited to be back for our fourth year and this one's going to be huge. (R)evolution has evolved into a full day, single-track web conference, with 8 of the web's most revolutionary thinkers and space for 200 attendees.</p>
+            <p>Whether you're a web industry veteran or just starting your career, you won't want to miss out on the chance to be part of one of the friendliest web conferences the UK has to offer.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block close-wrapper %}
+{% endblock %}
+{% block scripts %}
+{{ "owl.carousel.min.js" | asset_url | script_tag }}
+<script>
+    $(document).ready(function() {
+
+      $(".js-photos-carousel").owlCarousel({
+        items : 2,
+        itemsDesktop : [1024,2],
+        itemsDesktopSmall : false,
+        itemsTablet : false,
+        itemsMobile : [480,1] // itemsMobile disabled - inherit from itemsTablet option
+      });
+    });
+</script>
+{% endblock %}

@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
-    <head>
+   <head>
+        <!-- Title block allowing child pages to override -->
+        <title>Speakers &ndash; Shropgeek (R)evolution 2014</title>
+        
         <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
-        <title>Shropgeek (R)evolution 2014</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.png" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -15,6 +16,8 @@
 
         <!-- Styles -->
         <link href="assets/css/global.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+
         <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
@@ -25,13 +28,13 @@
     <ul class="quick-event-details header--pre_links-list">
       <li>Friday, 26 September 2014</li>
       <li>Shropshire Conference Centre, Shrewsbury</li>
-      <li><a href="#">#Revolutionconf</a></li>
+      <li><a href="#" class="hashtag">#Revolutionconf</a></li>
     </ul>
     <div class="quick-navigation-position">
      <ul class="secondary-links-menu header--pre_links-list nav__menu">
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="tickets-button">Tickets</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="mailto:revolution@shropgeek.co.uk">Contact</a></li>
+          <li><a href="tickets.html" class="tickets-button">Tickets</a></li>
       </ul>
     </div>
 
@@ -46,7 +49,7 @@
             <ul class="primary-links-menu nav__menu">
               <li
                 >
-                <a href="about">about</a>
+                <a href="about.html">About</a>
               </li>
               <li
                 
@@ -64,11 +67,11 @@
               </li>
               <li
                 >
-                <a href="fringe">Fringe</a>
+                <a href="fringe.html">Fringe</a>
               </li>
-              <li class="secondary-link"><a href="#">News</a></li>
-              <li class="secondary-link"><a href="#">Contact</a></li>
-              <li class="secondary-link"><a href="#" class="tickets-button">Tickets</a></li>
+              <li class="secondary-link"><a href="news.html">News</a></li>
+              <li class="secondary-link"><a href="/contact">Contact</a></li>
+              <li class="secondary-link"><a href="tickets.html" class="tickets-button">Tickets</a></li>
             </ul>
           </nav>
         </div>
@@ -82,16 +85,16 @@
 
             <!-- Content block, child page inject content -->
             
-<div class="hero hero--short">
+<div class="hero hero--short hero--border">
     <div class="wrapper">
         <h1>Speakers</h1>
         <p class="subtitle">People, what talk at you</p>
     </div>
 </div>
-<div class="speakers">
+<div class="speakers-page">
     <div class="wrapper">
         
-            <div class="speaker">
+            <div class="speaker" id="paul-boag">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -120,7 +123,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="rachel-andrew">
                 <h2 class="speaker__name">Rachel Andrew</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -149,7 +152,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -172,7 +175,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -195,7 +198,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -218,7 +221,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -241,7 +244,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -264,7 +267,7 @@
                 </div>
             </div>
         
-            <div class="speaker">
+            <div class="speaker" id="">
                 <h2 class="speaker__name">Paul Boag</h2>
                 <div class="speaker__details">
                     <div class="speaker-unit--metadata">
@@ -289,6 +292,7 @@
         
     </div>
 </div>
+
 
 
         
@@ -333,7 +337,10 @@
         <div class="footer--site-footer__grid-row">
             <div class="footer--site-footer__grid-unit-about">
                 <div class="about-shropgeek">
-                    <img src="http://placehold.it/200x200" alt="" />
+
+                    <a href="http://shropgeek.co.uk" class="shropgeek-logo">
+                        Shropgeek
+                    </a>
                     <div>
                     <p>We are a collection of like minded people based in and around Shropshire; who like to meet regularly to catchup on the latest goings on and socialise with fellow geeks.</p>
                     </div>
@@ -342,10 +349,10 @@
             --><div class="footer--site-footer__grid-unit-links">
                 <div class="site-footer__links-list">
                     <ul>
-                        <li><a href="#">Sponsors</a></li>
+                        <li><a href="mailto:revolution@shropgeek.co.uk">Contact</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Refunds</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
                     </ul>
                 </div>
                 <div class="site-footer__links-list">
@@ -362,10 +369,7 @@
     </div>
 </footer>
 
-
-        <!-- Script block allowing child pages to inject their own scripts -->
-        
-        <script src="assets/scripts/modernizer.min.js"></script>
+                <script src="assets/scripts/modernizer.min.js"></script>
         <script src="assets/scripts/svgeezy.min.js"></script>
         <script src="assets/scripts/responsive-nav.min.js"></script>
         <script src="assets/scripts/fitvids.min.js"></script>
@@ -381,5 +385,7 @@
         <script>
             var nav = responsiveNav(".nav-collapse");
         </script>
+
+        
     </body>
 </html>

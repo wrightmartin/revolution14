@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
-    <head>
+   <head>
+        <!-- Title block allowing child pages to override -->
+        <title>Location &ndash; Shropgeek (R)evolution 2014</title>
+        
         <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
-        <title>Shropgeek (R)evolution 2014</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.png" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -15,6 +16,8 @@
 
         <!-- Styles -->
         <link href="assets/css/global.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+
         <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
@@ -25,13 +28,13 @@
     <ul class="quick-event-details header--pre_links-list">
       <li>Friday, 26 September 2014</li>
       <li>Shropshire Conference Centre, Shrewsbury</li>
-      <li><a href="#">#Revolutionconf</a></li>
+      <li><a href="#" class="hashtag">#Revolutionconf</a></li>
     </ul>
     <div class="quick-navigation-position">
      <ul class="secondary-links-menu header--pre_links-list nav__menu">
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="tickets-button">Tickets</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="mailto:revolution@shropgeek.co.uk">Contact</a></li>
+          <li><a href="tickets.html" class="tickets-button">Tickets</a></li>
       </ul>
     </div>
 
@@ -46,7 +49,7 @@
             <ul class="primary-links-menu nav__menu">
               <li
                 >
-                <a href="about">about</a>
+                <a href="about.html">About</a>
               </li>
               <li
                 >
@@ -64,11 +67,11 @@
               </li>
               <li
                 >
-                <a href="fringe">Fringe</a>
+                <a href="fringe.html">Fringe</a>
               </li>
-              <li class="secondary-link"><a href="#">News</a></li>
-              <li class="secondary-link"><a href="#">Contact</a></li>
-              <li class="secondary-link"><a href="#" class="tickets-button">Tickets</a></li>
+              <li class="secondary-link"><a href="news.html">News</a></li>
+              <li class="secondary-link"><a href="/contact">Contact</a></li>
+              <li class="secondary-link"><a href="tickets.html" class="tickets-button">Tickets</a></li>
             </ul>
           </nav>
         </div>
@@ -82,57 +85,172 @@
 
             <!-- Content block, child page inject content -->
             
-<div class="hero hero--short">
-    <div class="wrapper">
-        <h1>The Shropshire Conference Centre</h1>
-        <p class="subtitle">Hello again</p>
+<div class="location__conference-centre">
+    <div class="hero hero--short">
+        <div class="wrapper">
+            <h1>The venue</h1>
+            <p class="subtitle">The Shropshire Conference Centre</p>
+        </div>
     </div>
-</div>
-<div class="conference-centre">
-                    <div class="map page">
-                    <div class="conference-centre-info">
-                        <div id="directionsPanel"></div>
-                        <img src="conference-centre.jpg" alt="conference-centre" />
-                        <div class="vcard">
-                            <div class="fn org">Shropshire Conference Centre</div>
-                            <div class="adr">
-                                <div class="street-address">
-                                    <span>Royal Shrewsbury Hospital</span>
-                                    <span>Mytton Oak Road</span>
-                                </div>
-                                <span class="locality">Shrewsbury</span>
-                                 <span class="region">Shropshire</span>
-                                 <div class="postal-code">SY3 8XQ</div>
-                                 <a href="https://maps.google.co.uk/maps?daddr=Shropshire+Conference+Centre,+Shropshire+Education+%26+Conference+Centre,,+Royal+Shrewsbury+Hospital,+Mytton+Oak+Road,+Shrewsbury,+Shropshire+SY3+8XQ&hl=en&sll=52.787012,-2.734892&sspn=0.249992,0.482712&geocode=CS9_3rY7p98UFTJOJAMdN2vV_yn3SMZZoJ96SDF8e6Jutr6kog&mra=ls&t=m&z=11">Get directions</a>
-                            </div>
+    <div class="conference-centre">
+        <div class="map page">
+            <div class="conference-centre-info">
+                <div id="directionsPanel"></div>
+                <img src="assets/img/conference-centre.jpg" alt="conference-centre" />
+                <div class="vcard">
+                    <div class="fn org">Shropshire Conference Centre</div>
+                    <div class="adr">
+                        <div class="street-address">
+                            <span>Royal Shrewsbury Hospital</span>
+                            <span>Mytton Oak Road</span>
                         </div>
-                    </div>
-                    <div id="map-canvas" class="map-canvas">
+                        <span class="locality">Shrewsbury</span>
+                         <span class="region">Shropshire</span>
+                         <div class="postal-code">SY3 8XQ</div>
+                         <a href="https://maps.google.co.uk/maps?daddr=Shropshire+Conference+Centre,+Shropshire+Education+%26+Conference+Centre,,+Royal+Shrewsbury+Hospital,+Mytton+Oak+Road,+Shrewsbury,+Shropshire+SY3+8XQ&hl=en&sll=52.787012,-2.734892&sspn=0.249992,0.482712&geocode=CS9_3rY7p98UFTJOJAMdN2vV_yn3SMZZoJ96SDF8e6Jutr6kog&mra=ls&t=m&z=11">Get directions</a>
                     </div>
                 </div>
-    <div class="wrapper">
-        <div class="conference-centre--grid-row">
-
-                <p>The Shropshire Conference Centre is located just outside Shrewsbury.    </p>
-                <p>The only purpose-built auditorium in Shropshire, it shares a large site with the Royal Shrewsbury Hospital, making it easy to find, with dedicated, private parking and great public transport links.</p>
-                <h2 class="tertiary-heading">Arriving by public transport</h2>
-                <p>If you arrive in Shrewsbury by train, there is a bus every 15 minutes to the conference centre from the town centre bus station, just ask for a return to the hospital.</p>
-                <p><a href="https://maps.google.co.uk/maps?daddr=Shropshire+Conference+Centre,+Shropshire+Education+%26+Conference+Centre,,+Royal+Shrewsbury+Hospital,+Mytton+Oak+Road,+Shrewsbury,+Shropshire+SY3+8XQ&amp;hl=en&amp;sll=52.787012,-2.734892&amp;sspn=0.249992,0.482712&amp;geocode=CS9_3rY7p98UFTJOJAMdN2vV_yn3SMZZoJ96SDF8e6Jutr6kog&amp;mra=ls&amp;t=m&amp;z=11" target="_blank">Directions</a> <a href="http://shropshire.gov.uk/bustimes/stop.jsc?stop=3500B255800" target="_blank">Bus times</a></p>
-
-
-
+            </div>
+            <div id="map-canvas" class="map-canvas">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="conference-centre--grid-row">
+                <div class="conference-centre--grid-unit">
+                    <p>The Shropshire Conference Centre is located just outside Shrewsbury.    </p>
+                    <p>The only purpose-built auditorium in Shropshire, it shares a large site with the Royal Shrewsbury Hospital, making it easy to find, with dedicated, private parking and great public transport links.</p>
+                </div>
+                <div class="conference-centre--grid-unit">
+                    <h2 class="tertiary-heading">Arriving by public transport</h2>
+                    <p>If you arrive in Shrewsbury by train, there is a bus every 15 minutes to the conference centre from the town centre bus station, just ask for a return to the hospital.</p>
+                    <p><a href="https://maps.google.co.uk/maps?daddr=Shropshire+Conference+Centre,+Shropshire+Education+%26+Conference+Centre,,+Royal+Shrewsbury+Hospital,+Mytton+Oak+Road,+Shrewsbury,+Shropshire+SY3+8XQ&amp;hl=en&amp;sll=52.787012,-2.734892&amp;sspn=0.249992,0.482712&amp;geocode=CS9_3rY7p98UFTJOJAMdN2vV_yn3SMZZoJ96SDF8e6Jutr6kog&amp;mra=ls&amp;t=m&amp;z=11" target="_blank">Directions</a> <a href="http://shropshire.gov.uk/bustimes/stop.jsc?stop=3500B255800" target="_blank">Bus times</a></p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="hero hero--short">
+<div class="location__shrewsbury">
+    <div class="hero hero--short">
+        <div class="wrapper">
+            <h1>Shrewsbury</h1>
+            <p class="subtitle">The town of flowers</p>
+        </div>
+    </div>
+    <div class="shrewsbury__photo-bg">
+        <div class="wrapper">
+            <div class="shrewsbury__photo__block">
+                <p>(R)evolution is held in Shrewsbury: birthplace of Charles Darwin, Shrewsbury is set amidst glorious countryside near to the Welsh Borders. It boasts over 600 listed buildings including the Castle, now a regimental museum and the world-famous Shrewsbury Abbey.
+                </p>
+                <p>
+                Shrewsbury is home to Shropgeek, part of a thriving tech industry stretching from the West Midlands to the Welsh border.
+                </p>
+            </div>
+
+        </div>
+    </div>
     <div class="wrapper">
-        <h1>Shrewsbury</h1>
-        <p class="subtitle">The town of flowers</p>
+        <div class="shrewsbury__travel">
+            <div class="shrewsbury__grid-row">
+                <div class="shrewsbury__travel--grid-unit">
+                    <h2>Travel</h2>
+                    <p>Shrewsbury is less than an hour from Birmingham, and 1 hour 40 from Manchester, Liverpool and Nottingham.</p>
+                </div>
+                <div class="shrewsbury__travel--grid-unit">
+                    <h3 class="push-top">By car</h3>
+                    <p>Shrewsbury connects to the M6 and motorway network via the M54. The A49, A5, A53, A458 all make Shrewsbury easily accessible.</p>
+                </div>
+                <div class="shrewsbury__travel--grid-unit">
+                    <h3 class="push-top">By rail</h3>
+                    <p>Shrewsbury train station is the centre of the town and is linked by a regular main line rail service and is a short walk away from the bus station.</p>
+                </div>
+            </div>
+        </div>
+        <div class="shrewsbury__accomodation">
+            <h2>Where to stay</h2>
+            <div class="shrewsbury__grid-row">
+                <div class="shrewsbury__accomodation--grid-unit">
+                    <div class="hotel vcard">
+                        <h3 class="fn org url"><a href="http://www.prince-rupert-hotel.co.uk/" target="_blank">The Prince Rupert</a></h3>
+                        <div class="addr">
+                            <p class="street-address">Butcher Row, Shrewsbury</p>
+                            <p class="locality">Shropshire <span class="postal-code">SY1 1UQ</span></p>
+                        </div>
+                        <p class="tel">01743 499955</p>
+                    </div>
+                </div><!--
+                --><div class="shrewsbury__accomodation--grid-unit">
+                    <div class="hotel vcard">
+                        <h3 class="fn org url"><a href="http://www.premierinn.com/en/hotel/SHRSMI/shrewsbury-town-centre" target="_blank">Premier Inn</a></h3>
+                        <div class="addr">
+                            <p class="street-address">Smithfield Road, Shrewsbury</p>
+                            <p class="locality">Shropshire <span class="postal-code">SY1 1QB</span></p>
+                        </div>
+                        <p class="tel">0871 527 9402</p>
+                    </div>
+                </div><!--
+                --><div class="shrewsbury__accomodation--grid-unit">
+                    <div class="hotel vcard">
+                        <h3 class="fn org url"><a href="http://www.oldpostofficepub.co.uk/" target="_blank">The Old Post Office</a></h3>
+                        <div class="addr">
+                            <p class="street-address">1 Milk Street, Shrewsbury</p>
+                            <p class="locality">Shropshire <span class="postal-code">SY1 1SZ</span></p>
+                        </div>
+                        <p class="tel">01743 236019</p>
+                    </div>
+                </div><!--
+                --><div class="shrewsbury__accomodation--grid-unit">
+                    <div class="hotel vcard">
+                        <h3 class="fn org url"><a href="http://www.jdwetherspoon.co.uk/home/pubs/the-shrewsbury-hotel" target="_blank">The Shrewsbury Hotel</a></h3>
+                        <div class="addr">
+                            <p class="street-address">Bridge Place, Shrewsbury</p>
+                            <p class="locality">Shropshire <span class="postal-code">SY1 1PU</span></p>
+                        </div>
+                        <p class="tel">01743 236203</p>
+                    </div>
+                </div><!--
+                --><div class="shrewsbury__accomodation--grid-unit">
+                    <div class="hotel vcard">
+                        <h3 class="fn org url"><a href="http://www.thelionhotelshrewsbury.com/" target="_blank">The Lion Hotel</a></h3>
+                        <div class="addr">
+                            <p class="street-address">Wyle Cop, Shrewsbury</p>
+                            <p class="locality">Shropshire <span class="postal-code">SY1 11UY</span></p>
+                        </div>
+                        <p class="tel">01743 353107</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-shrewsbury__food-and-drink">
+            <h3 class="section-heading">Food and Drink</h3>
+            <div class="about-shrewsbury__food-and-drink__grid-row">
+                <div class="about-shrewsbury__food-and-drink__grid-unit">
+                    <h4><a href="#">Eat up</a></h4>
+                    <p>Coffee, hearty lunches and amazing cakes</p>
+                </div><!--
+                --><div class="about-shrewsbury__food-and-drink__grid-unit">
+                    <h4><a href="#">Shrewsbury Coffee House</a></h4>
+                    <p>Has Bean Coffee and light lunches</p>
+                </div><!--
+                --><div class="about-shrewsbury__food-and-drink__grid-unit">
+                    <h4><a href="#">The Birds nest</a></h4>
+                    <p>Coffee, cake and lunch amongst the hustle and bustle of the market hall</p>
+                </div><!--
+                --><div class="about-shrewsbury__food-and-drink__grid-unit">
+                    <h4><a href="#">Les Crêpes de Sophie</a></h4>
+                    <p>Authentic French crêpes served in the market</p>
+                </div><!--
+                --><div class="about-shrewsbury__food-and-drink__grid-unit">
+                    <h4><a href="#">Frank</a></h4>
+                    <p>American style diner with good beer and even better burgers</p>
+                </div><!--
+                --><div class="about-shrewsbury__food-and-drink__grid-unit">
+                    <h4><a href="#">The Armory</a></h4>
+                    <p>Gastropub on the riverside</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-    <script src="assets/scripts/map.min.js"></script>
 
 
 
@@ -178,7 +296,10 @@
         <div class="footer--site-footer__grid-row">
             <div class="footer--site-footer__grid-unit-about">
                 <div class="about-shropgeek">
-                    <img src="http://placehold.it/200x200" alt="" />
+
+                    <a href="http://shropgeek.co.uk" class="shropgeek-logo">
+                        Shropgeek
+                    </a>
                     <div>
                     <p>We are a collection of like minded people based in and around Shropshire; who like to meet regularly to catchup on the latest goings on and socialise with fellow geeks.</p>
                     </div>
@@ -187,10 +308,10 @@
             --><div class="footer--site-footer__grid-unit-links">
                 <div class="site-footer__links-list">
                     <ul>
-                        <li><a href="#">Sponsors</a></li>
+                        <li><a href="mailto:revolution@shropgeek.co.uk">Contact</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Refunds</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
                     </ul>
                 </div>
                 <div class="site-footer__links-list">
@@ -207,10 +328,7 @@
     </div>
 </footer>
 
-
-        <!-- Script block allowing child pages to inject their own scripts -->
-        
-        <script src="assets/scripts/modernizer.min.js"></script>
+                <script src="assets/scripts/modernizer.min.js"></script>
         <script src="assets/scripts/svgeezy.min.js"></script>
         <script src="assets/scripts/responsive-nav.min.js"></script>
         <script src="assets/scripts/fitvids.min.js"></script>
@@ -226,5 +344,9 @@
         <script>
             var nav = responsiveNav(".nav-collapse");
         </script>
+
+        
+    <script src="assets/scripts/map.min.js"></script>
+
     </body>
 </html>

@@ -1,0 +1,124 @@
+{% block title %}Fringe{% endblock %}
+{% block open-wrapper %}
+{% endblock %}
+{% block content %}
+<div class="fringe">
+    <div class="hero hero--short hero--border">
+        <div class="wrapper">
+            <h1>Fringe</h1>
+            <p class="subtitle">More than a web conference</p>
+        </div>
+    </div>
+
+    <div class="fringe__content">
+        <div class="main-fringe">
+            <div class="wrapper">
+                <h2>Official events</h2>
+                <div class="fringe-event">
+                    <img src="{{ "rebellion.jpg" | asset_url }}" >
+                    <div>
+                        <h3 class="fringe-event__title">Shropgeek Rebellion</h3>
+                        <p class="fringe-event__time">6:30pm, Thursday 26 September 2014</p>
+                        <div class="fringe-event__description">
+                            <p>Rebellion is our quarterly event featuring talks from industry folk from Shropshire. We're putting on a special Rebellion the night before the conference as a warm up. Featuring Shropshire residents Neil Kinnish and Jan Minihane. Find out more on Lanyrd.</p>
+                        </div>
+                        <p class="fringe-event__location"><a href="#">Someplace, Shrewsbury, SY3 0NZ</a></p>
+                    </div>
+                </div>
+                <div class="fringe-event">
+                    <img src="{{ "after-party.jpg" | asset_url }}" >
+                    <div>
+                        <h3 class="fringe-event__title">After Party</h3>
+                        <p class="fringe-event__time">6:30pm, Thursday 26 September 2014</p>
+                        <div class="fringe-event__description">
+                            <p>The after party is where it’s at! We want this to be the best party Shropshire has ever seen, and with the help of Romolo, Shrewsbury's only waterside cocktail lounge and some money behind the bar we have no doubt that it will be!</p>
+                        </div>
+                        <p class="fringe-event__location"><a href="#">Someplace, Shrewsbury, SY3 0NZ</a></p>
+                    </div>
+                </div>
+                <div class="fringe-event">
+                    <img src="{{ "breakfast.jpg" | asset_url }}" >
+                    <div>
+                        <h3 class="fringe-event__title">Shropgeek breakfast</h3>
+                        <p class="fringe-event__time">9:30am, Thursday 26 September 2014</p>
+                        <div class="fringe-event__description">
+                            <p>The after party is where it’s at! We want this to be the best party Shropshire has ever seen, and with the help of Romolo, Shrewsbury's only waterside cocktail lounge and some money behind the bar we have no doubt that it will be!</p>
+                        </div>
+                        <p class="fringe-event__location"><a href="#">Someplace, Shrewsbury, SY3 0NZ</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-shrewsbury">
+            <div class="wrapper">
+                <h2>Shrewsbury</h2>
+                <p>We love our town and think you'd be missing out if you didn't stick around and enjoy it. Here's a few things worth your time</p>
+                <div class="about-shrewsbury__grid-row">
+                    <div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event">
+                            <img src="{{ "darwin.jpg" | asset_url }}" >
+                            <h3><a href="#">Charles Darwin</a></h3>
+                        </div>
+                    </div><!--
+                    --><div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event">
+                            <img src="{{ "castle.jpg" | asset_url }}" >
+                            <h3><a href="#">Shrewsbury castle</a></h3>
+                        </div>
+                    </div><!--
+                    --><div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event">
+                            <img src="{{ "river.jpg" | asset_url }}" >
+                            <h3><a href="#">Sabrina river cruises</a></h3>
+                        </div>
+                    </div><!--
+                    --><div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event">
+                            <img src="{{ "market.jpg" | asset_url }}" >
+                            <h3><a href="#">Shrewsbury Market</a></h3>
+                        </div>
+                    </div><!--
+                    --><div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event">
+                            <img src="{{ "quarry.jpg" | asset_url }}" >
+                            <h3><a href="#">The Quarry</a></h3>
+                        </div>
+                    </div><!--
+                    --><div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event">
+                            <img src="{{ "abbey.jpg" | asset_url }}" >
+                            <h3><a href="#">Shrewsbury Abbey</a></h3>
+                        </div>
+                    </div><!--
+                    --><div class="about-shrewsbury__grid-unit">
+                        <div class="shrewsbury-fringe-event ">
+                            <img src="{{ "shrewsbury-logo.png" | asset_url }}" class="add-border">
+                            <p><a href="#">More at Visit Shrewsbury</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block close-wrapper %}
+{% endblock %}
+{% block scripts %}
+{{ "owl.carousel.min.js" | asset_url | script_tag }}
+<script>
+    $(document).ready(function() {
+
+      $(".js-photos-carousel").owlCarousel({
+        items : 2,
+        itemsDesktop : [1024,2],
+        itemsDesktopSmall : false,
+        itemsTablet : false,
+        itemsMobile : [480,1] // itemsMobile disabled - inherit from itemsTablet option
+      });
+    });
+</script>
+{% endblock %}

@@ -11,6 +11,10 @@
     position: relative;
 }
 
+.add-border {
+    border: 1px solid $colour_borders;
+}
+
 @mixin unstyled-list {
     margin-left: 0;
     padding-left: 0;
@@ -68,6 +72,7 @@
     background-color: $background-color;
     color: #fff;
 }
+
 
 @function calculateRem($size, $base) {
   $remSize: $size / $base;
@@ -158,23 +163,37 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
     }
 }
 
+@mixin block-grid-eigth {
+    width: 9.875%;
+    &:nth-child(8n+1) {
+        margin-left: 0;
+    }
+}
+
+@mixin block-grid-sixth {
+    width: 14.166666667%;
+    &:nth-child(6n+1) {
+        margin-left: 0;
+    }
+}
+
 @mixin block-grid-fifth {
     width: 17.6%;
-    &:nth-child(6) {
+    &:nth-child(5n+1) {
         margin-left: 0;
     }
 }
 
 @mixin block-grid-quarter {
     width: 22.75%;
-    &:nth-child(5) {
+    &:nth-child(4n+1) {
         margin-left: 0;
     }
 }
 
 @mixin block-grid-third {
     width: 30.666666667%;
-    &:nth-child(4) {
+    &:nth-child(3n+1) {
         margin-left: 0;
     }
 }
