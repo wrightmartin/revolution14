@@ -67,10 +67,12 @@
     }
 }
 
-@mixin button($background-color: #dd4400) {
-    padding: 0.3em;
+@mixin button($background-color: $colour_red) {
+    display: inline-block;
+    padding: 0.3em 1em;
     background-color: $background-color;
     color: #fff;
+    border-radius: 3px;
 }
 
 

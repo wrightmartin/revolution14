@@ -43,40 +43,20 @@
       "talk_description":""
     },
     {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
-    },
-    {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
-    },
-    {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
-    },
-    {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
-    },
-    {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
-    },
-    {
-      "name": "Paul Boag",
-      "job_title": "Managing Director",
-      "organisation": "Headscape",
-      "photo": "paul-boag.jpg"
+      "name": "Amy Thibodeau",
+      "organisations": [
+        [
+          {
+            "name": "Facebook",
+            "url": "http://facebook.com"
+          }
+        ]
+      ],
+      "photo": "amy-thibodeau.jpg",
+      "description": "<p>Amy Thibodeau is a writer and content strategist at Facebook. Before relocating to the London office this past November, she managed the Facebook content strategy team that focuses on making interfaces for business easier to use and understand. Now she works on a range of different projects with an amazing team of UK-based product managers and engineers</p><p>In her spare time, Amy dabbles in photography, occasionally writes about language for The Guardian and collects ephemera on her blog. Before joining Facebook, she travelled around the world for a year doing personal projects and consulting work through Contentini, a boutique web agency she co-founded.</p>",
+      "bookmark_link": "amy-thibodeau",
+      "talk_title":"Designing with words: The role of content strategy in product development",
+      "talk_description":"<p>We’ll focus on the often neglected words that help shape your user experience and discuss how to approach interface content as a design practice. The goal? To help you build better experiences that warm the cockles of your users' hearts while encouraging them to tap, click and stay engaged. </p>"
     }
   ]
 }

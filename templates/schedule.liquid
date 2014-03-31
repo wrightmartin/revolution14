@@ -9,214 +9,244 @@
         <p class="subtitle">Yep, a conference schedule</p>
     </div>
 </div>
-<div class="schedule">
+<div class="schedule__content">
     <div class="wrapper">
-     <ol class="big-schedule-list">
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                8:30<span class="meridian">am</span>
+        <div class="schedule__grid-row">
+            <div class="schedule__primary-grid-unit">
+            <ol class="big-schedule-list">
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    8:30<span class="meridian">am</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__agenda-name">Registration</h2>
+                    <div class="schedule__description">
+                        <p>Collect your badge and conference bag, enjoy a chat and a coffee</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    9:20<span class="meridian">am</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__agenda-name">Opening</h2>
+                    <div class="schedule__description">
+                        <p>Kirsty and Zach welcome you to the fifth Shropgeek (R)evolution</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                        9:30<span class="meridian">am</span>
+                    </div>
+                </div>
+                {% for speaker in model.speaker limit:1 offset:0 %}
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name">
+                        <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
+                    </h2>
+                    <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
+                    <div class="schedule__description">
+                        {{ speaker.talk_description }}
+                    </div>
+                </div>
+                {% endfor %}
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    10:15<span class="meridian">am</span>
+                    </div>
+                </div>
+                {% for speaker in model.speaker limit:1 offset:1 %}
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name">
+                        <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
+                    </h2>
+                    <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
+                    <div class="schedule__description">
+                        {{ speaker.talk_description }}
+                    </div>
+                </div>
+                {% endfor %}
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    10:50<span class="meridian">am</span>
+                    </div>
+                </div>
+                {% for speaker in model.speaker limit:1 offset:2 %}
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name">
+                        <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
+                    </h2>
+                    <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
+                    <div class="schedule__description">
+                        {{ speaker.talk_description }}
+                    </div>
+                </div>
+                {% endfor %}
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    11:20<span class="meridian">am</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                    <p class="schedule__talk-title">The title of the talk</p>
+                    <div class="schedule__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    11:55<span class="meridian">am</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                    <p class="schedule__talk-title">The title of the talk</p>
+                    <div class="schedule__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    1:00<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__agenda-name">Lunch</h2>
+                    <div class="schedule__description">
+                        <p>Sandwiches and refreshments</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    2:00<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                    <p class="schedule__talk-title">The title of the talk</p>
+                    <div class="schedule__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    2:45<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                    <p class="schedule__talk-title">The title of the talk</p>
+                    <div class="schedule__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    3:20<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__agenda-name">Break</h2>
+                    <div class="schedule__description">
+                        <p>Drinks and refreshment, sponsored by <a href="#">Sponsor</a></p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    3:50<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                    <p class="schedule__talk-title">The title of the talk</p>
+                    <div class="schedule__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    4:35<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
+                    <p class="schedule__talk-title">The title of the talk</p>
+                    <div class="schedule__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <div class="schedule-unit--time">
+                    <div class="schedule__time">
+                    5:20<span class="meridian">pm</span>
+                    </div>
+                </div>
+                <div class="schedule-unit--entry">
+                    <h2 class="schedule__agenda-name">Close</h2>
+                    <div class="schedule__description">
+                        <p>Kirsty and Zach wrap up the day</p>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        </div>
+            <div class="schedule__secondary-grid-unit">
+                <div class="sidebar">
+                <h2><a href="/fringe/">Fringe events</a></h2>
+
+                <div class="schedule__fringe-teaser">
+                    <h3>Shropgeek Rebellion</h3>
+                    <p>6:30pm, Thursday 26 September 2014</p>
+                    <p><a href="/fringe#rebellion" class="more-info">More information</a></p>
+                </div>
+                <div class="schedule__fringe-teaser">
+                    <h3>After party</h3>
+                    <p>6:30pm, Thursday 26 September 2014</p>
+                    <p><a href="/fringe#party" class="more-info">More information</a></p>
+                </div>
+                <div class="schedule__fringe-teaser">
+                    <h3>Other event</h3>
+                    <p>6:30pm, Thursday 26 September 2014</p>
+                    <p><a href="/fringe#rebellion" class="more-info">More information</a></p>
+                </div>
                 </div>
             </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__agenda-name">Registration</h2>
-                <div class="schedule__description">
-                    <p>Collect your badge and conference bag, enjoy a chat and a coffee</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                9:20<span class="meridian">am</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__agenda-name">Opening</h2>
-                <div class="schedule__description">
-                    <p>Kirsty and Zach welcome you to the fifth Shropgeek (R)evolution</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                    9:30<span class="meridian">am</span>
-                </div>
-            </div>
-            {% for speaker in model.speaker limit:1 offset:0 %}
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name">
-                    <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
-                </h2>
-                <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
-                <div class="schedule__description">
-                    {{ speaker.talk_description }}
-                </div>
-            </div>
-            {% endfor %}
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                10:15<span class="meridian">am</span>
-                </div>
-            </div>
-            {% for speaker in model.speaker limit:1 offset:1 %}
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name">
-                    <a href="speakers#{{ speaker.bookmark_link }}">{{ speaker.name }}</a>
-                </h2>
-                <p class="schedule__talk-title">{{ speaker.talk_title }}</p>
-                <div class="schedule__description">
-                    {{ speaker.talk_description }}
-                </div>
-            </div>
-            {% endfor %}
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                10:50<span class="meridian">am</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__agenda-name">Coffee break</h2>
-                <div class="schedule__description">
-                    <p>A short break for refreshments, have a drink on <a href="#">Sponsor</a></p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                11:20<span class="meridian">am</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
-                <p class="schedule__talk-title">The title of the talk</p>
-                <div class="schedule__description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                11:55<span class="meridian">am</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
-                <p class="schedule__talk-title">The title of the talk</p>
-                <div class="schedule__description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                1:00<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__agenda-name">Lunch</h2>
-                <div class="schedule__description">
-                    <p>Sandwiches and refreshments</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                2:00<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
-                <p class="schedule__talk-title">The title of the talk</p>
-                <div class="schedule__description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                2:45<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
-                <p class="schedule__talk-title">The title of the talk</p>
-                <div class="schedule__description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                3:20<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__agenda-name">Break</h2>
-                <div class="schedule__description">
-                    <p>Drinks and refreshment, sponsored by <a href="#">Sponsor</a></p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                3:50<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
-                <p class="schedule__talk-title">The title of the talk</p>
-                <div class="schedule__description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                4:35<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__speaker-name"><a href="#">The name of the speaker</a></h2>
-                <p class="schedule__talk-title">The title of the talk</p>
-                <div class="schedule__description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </li>
-        <li class="schedule-item">
-            <div class="schedule-unit--time">
-                <div class="schedule__time">
-                5:20<span class="meridian">pm</span>
-                </div>
-            </div>
-            <div class="schedule-unit--entry">
-                <h2 class="schedule__agenda-name">Close</h2>
-                <div class="schedule__description">
-                    <p>Kirsty and Zach wrap up the day</p>
-                </div>
-            </div>
-        </li>
-     </ol>
+        </div>
     </div>
 </div>
 {% endblock %}

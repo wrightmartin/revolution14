@@ -267,13 +267,13 @@ img {
 }
 .secondary-links-menu a {
     position: relative;
-    top: -1em;
+    top: -0.8em;
 }
 .nav__menu .tickets-button {
     @media (min-width: $large-screen) {
         background-color: #fff;
         color: $colour_red;
-        padding: 1em;
+        padding: 0.9em 1em;
         display: inline-block;
     }
 }
@@ -341,6 +341,9 @@ img {
     padding: 5em 0;
     a {
         color: $colour_gold;
+        @include hoverActiveFocus {
+            color: #fff;
+        }
     }
 }
 
@@ -351,15 +354,14 @@ img {
 .footer--site-footer__grid-unit-about {
     @media (min-width: $medium-screen) {
         @include grid-column;
-        @include grid-column--half;
+        @include grid-column--two-thirds;
     }
 }
 
 .footer--site-footer__grid-unit-links {
     @media (min-width: $medium-screen) {
         @include grid-column;
-        @include grid-column--quarter;
-        margin-left: 25%;
+        @include grid-column--third;
     }
 }
 
@@ -369,27 +371,44 @@ img {
         background-image: url('../img/shropgeek.svg');
         background-position: top left;
         background-repeat: no-repeat;
-        background-size: 200px 153px;
-        height: 153px;
-        width: 200px;
+        background-size: 100px 77px;
+        height: 77px;
+        width: 100px;
+        @media (min-width: $medium-screen) {
+            background-size: 200px 153px;
+            height: 153px;
+            width: 200px;
+        }
 }
 
 
 .about-shropgeek {
     @include media-block;
     margin-bottom: 3em;
+
     p {
         font-size: 0.888888889em;
+        max-width: 26em;
+        @media (min-width: $medium-screen) {
+            margin-top: 0.8em;
+        }
     }
 }
 
 .site-footer__links-list {
-    width: 50%;
-    float: left;
+    text-align: center;
+    @media (min-width: $medium-screen) {
+        text-align: right;
+        width: 50%;
+        float: left;
+    }
     ul {
         @include unstyled-list;
         font-family: $futura;
         margin: 0;
+        @media (max-width: $medium-screen) {
+            @include inline-list;
+        }
     }
     a {
         font-size: 0.777777778em;
@@ -399,6 +418,20 @@ img {
     h3 {
         @extend .senary-heading;
         font-size: 0.777777778em
+    }
+}
+
+a.button--social {
+    @include button($background-color: lighten($colour_black, 5%));
+    margin-right: 1em;
+    color: #fff;
+    font-family: $futura;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.611111111em;
+    @include hoverActiveFocus {
+        background-color: $colour_gold;
+        text-decoration: none;
     }
 }
 
@@ -595,9 +628,33 @@ img {
 }
 
 /* schedule */
+.schedule__content {
+    padding: $gutter-width * 2 0;
+}
+
+.schedule__grid-row {
+    @include grid-row;
+}
+
+.schedule__primary-grid-unit {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--three-quarters;
+    }
+
+}
+
+.schedule__secondary-grid-unit {
+    @media (min-width: $large-screen) {
+        @include grid-column;
+        @include grid-column--quarter;
+    }
+}
+
 .big-schedule-list {
     @include unstyled-list;
     @include clearfix;
+    margin-top: 0;
 }
 
 .schedule-item {
@@ -605,6 +662,9 @@ img {
     padding-top: 2em;
     padding-bottom: 2em;
     border-bottom: 1px solid $colour_borders;
+    &:first-child {
+        padding-top: 0;
+    }
     &:last-child {
         border-bottom: none;
     }
@@ -621,15 +681,22 @@ img {
         @include grid-column;
         @include grid-column--five-sixths;
     }
-    @media (min-width: $large-screen) {
-        @include grid-column;
-        @include grid-column--half;
-    }
 }
 
 .schedule__time {
     font-family: $futura;
     margin-bottom: 1em;
+}
+
+.schedule__fringe-teaser {
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $colour_borders;
+    p {
+        margin-bottom: 0;
+        color: $colour_grey;
+        font-size: .888888889em;
+    }
 }
 
 .meridian {
@@ -1180,6 +1247,10 @@ img {
     h2 {
         @extend .quarternary-heading;
     }
+    h3 {
+        @extend .quinary-heading;
+        font-weight: 500;
+    }
 }
 
 .main-fringe {
@@ -1197,6 +1268,7 @@ img {
         @media (min-width: $medium-screen) {
             width: 35%;
             max-width: 300px;
+            margin-right: $gutter-width !important;
         }
     }
 }
@@ -1297,6 +1369,7 @@ img {
     ul {
         @include unstyled-list;
         @include inline-list;
+        margin-left: 0;
         li {
             margin: 0;
             &:nth-child(even) {
