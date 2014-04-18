@@ -384,7 +384,8 @@ a {
   color: #c1503e;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #333333; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -677,7 +678,11 @@ img {
    */
   background-color: #333333;
   color: #fff;
-  padding: 5em 0; }
+  padding: 5em 0 8em;
+  background-image: url("../img/footer.svg");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100%; }
   .footer--site-footer:before, .footer--site-footer:after {
     content: " ";
     /* 1 */
@@ -806,6 +811,10 @@ a.button--social {
   a.button--social:hover, a.button--social:active, a.button--social:focus {
     background-color: #caa75b;
     text-decoration: none; }
+    a.button--social:hover.button--twitter, a.button--social:active.button--twitter, a.button--social:focus.button--twitter {
+      background-color: #55acee; }
+    a.button--social:hover.button--facebook, a.button--social:active.button--facebook, a.button--social:focus.button--facebook {
+      background-color: #3B5998; }
 
 .grid {
   width: 100%;
@@ -848,8 +857,19 @@ a.button--social {
     padding-bottom: 1.4em; }
 
 .hero-homepage {
-  border-bottom: 1px solid #e9e9e9;
-  margin-bottom: 4em; }
+  border-bottom: none;
+  margin-bottom: 0;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .hero-homepage .wrapper {
+    background-image: url("../img/hero.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 4em;
+    padding-bottom: 16em;
+    max-width: 1400px; }
 
 .hero--border {
   border-bottom: 1px solid #e9e9e9; }
@@ -898,7 +918,14 @@ a.button--social {
     color: #c1503e; }
 
 .speakers {
-  padding: 0 0 1.5em; }
+  padding: 4em 0 1.5em;
+  background-color: #333;
+  color: #fff; }
+  .speakers a {
+    color: #fff; }
+    .speakers a:hover, .speakers a:active, .speakers a:focus {
+      color: #cd7365;
+      text-decoration: none; }
 
 @media (min-width: 41.875em) and (max-width: 64em) {
   .grid-unit--speaker--preview {
@@ -924,6 +951,8 @@ a.button--social {
 .speaker--preview {
   text-align: center;
   margin-bottom: 3.5em; }
+  .speaker--preview img {
+    margin-bottom: 0.5em; }
 
 .speaker--preview__name {
   font-size: 1.333333333em;

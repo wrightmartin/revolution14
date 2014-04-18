@@ -31,6 +31,7 @@ a {
     &:active,
     &:focus {
         text-decoration: underline;
+        color: $colour_black;
     }
 }
 
@@ -338,7 +339,14 @@ img {
     @include clearfix;
     background-color: $colour_black;
     color: #fff;
-    padding: 5em 0;
+    padding: 5em 0 8em;
+    background-image: url('../img/footer.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .wrapper {
+
+    }
     a {
         color: $colour_gold;
         @include hoverActiveFocus {
@@ -432,7 +440,14 @@ a.button--social {
     @include hoverActiveFocus {
         background-color: $colour_gold;
         text-decoration: none;
+        &.button--twitter {
+            background-color: #55acee;
+        }
+        &.button--facebook {
+            background-color: #3B5998;
+        }
     }
+
 }
 
 .grid {
@@ -470,9 +485,23 @@ a.button--social {
 }
 
 .hero-homepage {
-    border-bottom: 1px solid $colour_borders;
-    margin-bottom: $gutter-width * 2;
+    border-bottom: none;
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    .wrapper {
+        background-image: url('../img/hero.svg');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: $gutter-width*2;
+        padding-bottom: $gutter-width*8;
+        max-width: 1400px;
+    }
 }
+
+
 
 .hero--border {
     border-bottom: 1px solid $colour_borders;
@@ -519,7 +548,16 @@ a.button--social {
 
 .speakers {
     @extend .fullpage-section;
-    padding: 0 0 1.5em;
+    padding: $gutter-width * 2 0 1.5em;
+    background-color: #333;
+    color: #fff;
+    a {
+        color: #fff;
+        @include hoverActiveFocus {
+            color: lighten($colour_red, 10%);
+            text-decoration: none;
+        }
+    }
 }
 
 .grid-unit--speaker--preview {
@@ -536,6 +574,9 @@ a.button--social {
 .speaker--preview {
     text-align: center;
     margin-bottom: 3.5em;
+    img {
+        margin-bottom: 0.5em;
+    }
 }
 
 .speaker--preview__name {

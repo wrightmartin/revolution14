@@ -1,22 +1,32 @@
 {
   "news": {
     "index": {
-      "transliterated-layout": {
-        "news": [
+      "mixture_date": {
+        "2013-04-01t09:00:00z": [
+          "/news/example-post-2"
+        ],
+        "2013-04-02t10:00:00z": [
+          "/news/example-post-3"
+        ],
+        "2013-04-03t00:00:00z": [
+          "/news/example-post"
+        ]
+      },
+      "transliterated-nicedate": {
+        "4th-april-2013": [
+          "/news/example-post"
+        ]
+      },
+      "month": {
+        "04": [
           "/news/example-post",
           "/news/example-post-3",
           "/news/example-post-2"
         ]
       },
-      "slug": {
-        "/news/example-post": [
+      "nicedate": {
+        "4th april 2013": [
           "/news/example-post"
-        ],
-        "/news/example-post-2": [
-          "/news/example-post-2"
-        ],
-        "/news/example-post-3": [
-          "/news/example-post-3"
         ]
       },
       "transliterated-title": {
@@ -30,58 +40,19 @@
           "/news/example-post"
         ]
       },
-      "mixture_month_year": {
-        "04/2013": [
-          "/news/example-post",
-          "/news/example-post-3",
-          "/news/example-post-2"
-        ]
-      },
-      "transliterated-nicedate": {
-        "4th-april-2013": [
+      "slug": {
+        "/news/example-post": [
           "/news/example-post"
-        ]
-      },
-      "nicedate": {
-        "4th april 2013": [
-          "/news/example-post"
-        ]
-      },
-      "mixture_date": {
-        "2013-04-02t10:00:00z": [
-          "/news/example-post-3"
         ],
-        "2013-04-01t09:00:00z": [
+        "/news/example-post-2": [
           "/news/example-post-2"
         ],
-        "2013-04-03t00:00:00z": [
-          "/news/example-post"
-        ]
-      },
-      "title": {
-        "example post containing a really sweet announcement!": [
-          "/news/example-post"
-        ],
-        "example post 2": [
-          "/news/example-post-2"
-        ],
-        "example post 3": [
+        "/news/example-post-3": [
           "/news/example-post-3"
         ]
       },
-      "ticks": {
-        "1364896800.0": [
-          "/news/example-post-3"
-        ],
-        "1364947200.0": [
-          "/news/example-post"
-        ],
-        "1364806800.0": [
-          "/news/example-post-2"
-        ]
-      },
-      "year": {
-        "2013": [
+      "transliterated-layout": {
+        "news": [
           "/news/example-post",
           "/news/example-post-3",
           "/news/example-post-2"
@@ -89,13 +60,6 @@
       },
       "layout": {
         "news": [
-          "/news/example-post",
-          "/news/example-post-3",
-          "/news/example-post-2"
-        ]
-      },
-      "month": {
-        "04": [
           "/news/example-post",
           "/news/example-post-3",
           "/news/example-post-2"
@@ -111,48 +75,84 @@
         "/news/example-post-3": [
           "/news/example-post-3"
         ]
+      },
+      "title": {
+        "example post containing a really sweet announcement!": [
+          "/news/example-post"
+        ],
+        "example post 2": [
+          "/news/example-post-2"
+        ],
+        "example post 3": [
+          "/news/example-post-3"
+        ]
+      },
+      "year": {
+        "2013": [
+          "/news/example-post",
+          "/news/example-post-3",
+          "/news/example-post-2"
+        ]
+      },
+      "ticks": {
+        "1364896800.0": [
+          "/news/example-post-3"
+        ],
+        "1364806800.0": [
+          "/news/example-post-2"
+        ],
+        "1364947200.0": [
+          "/news/example-post"
+        ]
+      },
+      "mixture_month_year": {
+        "04/2013": [
+          "/news/example-post",
+          "/news/example-post-3",
+          "/news/example-post-2"
+        ]
       }
     },
     "collection": {
       "/news/example-post": {
-        "slug": "/news/example-post",
-        "mixture_month_year": "04/2013",
         "mixture_date": "2013-04-03T00:00:00Z",
-        "nicedate": "4th April 2013",
-        "published": true,
-        "ticks": 1364947200.0,
-        "title": "Example post containing a really sweet announcement!",
-        "year": "2013",
+        "date": "Wed Apr 03 00:00:00 UTC 2013",
         "month": "04",
-        "layout": "news",
         "body": "\n<h1><a href=\"/news/example-post\">Example post containing a really sweet announcement!</a></h1>\n\n<p><span class=\"news-post__date\">4th April 2013</span></p>\n\n<p>Russia&#8217;s foreign ministry said Moscow has the right to a tit-for-tat response to the second wave of sanctions imposed by the EU over its annexation of the Ukrainian region of Crimea.</p>\n\n<h2>Heading 2</h2>\n\n<p>The EU imposed an new set of sanctions on Friday, adding 12 Russians and Crimeans to a list of people targeted by EU asset freezes and travel bans. There are now 33 on the list.</p>\n\n<h3>Heading 3</h3>\n\n<p>&#8220;It&#8217;s a pity that the European council made a decision that is divorced from reality,&#8221; the ministry&#8217;s spokesman Alexander Lukashevich said on Saturday.</p>\n\n<p>&#8220;We believe it is time to return to the platform of pragmatic co-operation that reflects the interests of our countries.</p>\n\n<p>&#8220;However, of course, the Russian side reserves itself the right to give a comparable answer to the actions taken.&#8221;</p>\n",
-        "date": "Wed Apr 03 00:00:00 UTC 2013"
+        "nicedate": "4th April 2013",
+        "slug": "/news/example-post",
+        "published": true,
+        "layout": "news",
+        "ticks": 1364947200.0,
+        "year": "2013",
+        "title": "Example post containing a really sweet announcement!",
+        "mixture_month_year": "04/2013"
       },
       "/news/example-post-3": {
-        "slug": "/news/example-post-3",
-        "mixture_month_year": "04/2013",
         "mixture_date": "2013-04-02T10:00:00Z",
-        "published": true,
-        "ticks": 1364896800.0,
-        "title": "Example post 3",
-        "year": "2013",
+        "date": "Tue Apr 02 10:00:00 UTC 2013",
         "month": "04",
-        "layout": "news",
         "body": "\n<h1><a href=\"/news/example-post-3\">Example post 3</a></h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n\n<blockquote>\n  <p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br />\nconsectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br />\nVestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>\n</blockquote>\n",
-        "date": "Tue Apr 02 10:00:00 UTC 2013"
+        "slug": "/news/example-post-3",
+        "published": true,
+        "layout": "news",
+        "ticks": 1364896800.0,
+        "year": "2013",
+        "title": "Example post 3",
+        "mixture_month_year": "04/2013"
       },
       "/news/example-post-2": {
-        "slug": "/news/example-post-2",
-        "mixture_month_year": "04/2013",
         "mixture_date": "2013-04-01T09:00:00Z",
-        "published": true,
-        "ticks": 1364806800.0,
-        "title": "Example post 2",
-        "year": "2013",
+        "date": "Mon Apr 01 09:00:00 UTC 2013",
         "month": "04",
-        "layout": "news",
         "body": "\n<h1><a href=\"/news/example-post-2\">Example post 2</a></h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n",
-        "date": "Mon Apr 01 09:00:00 UTC 2013"
+        "slug": "/news/example-post-2",
+        "published": true,
+        "layout": "news",
+        "ticks": 1364806800.0,
+        "year": "2013",
+        "title": "Example post 2",
+        "mixture_month_year": "04/2013"
       }
     }
   }
