@@ -3,7 +3,9 @@
 @import 'mixins';
 
 * {
-    box-sizing: border-box;
+   -moz-box-sizing: border-box;   /* Firefox 1, probably can drop this */
+   -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+    box-sizing: border-box;   /* Everything else */
 }
 
 html {
@@ -136,6 +138,10 @@ img {
 .quick-event-details {
     @include unstyled-list;
     margin: 0;
+    font-size: 0.75em;
+    @media (min-width: $medium-screen) {
+        font-size: 1em;
+    }
     @media (min-width: $large-screen) {
         @include inline-list;
     }
@@ -194,13 +200,21 @@ img {
     h1 {
         margin: 0;
         line-height: 1em;
-        width: 5.55em;
-        height: 1.416666667em;
+        width: 195px;
+        height: 50px;
         @extend .image-replacement;
         display: inline-block;
         background-image: url('../img/2014-logo.svg');
         background-position: top left;
         background-repeat: no-repeat;
+        position: relative;
+        top: .25em;
+        @media (min-width: $medium-screen) {
+            width: 5.55em;
+            height: 1.416666667em;
+            position: static;
+            top: auto;
+        }
     }
 }
 
@@ -255,6 +269,9 @@ img {
     a {
         display: block;
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        @media (min-width: $large-screen) {
+            border-bottom: none;
+        }
         padding: 0.4em 0.6em;
     }
 }
@@ -494,10 +511,14 @@ a.button--social {
         background-image: url('../img/hero.svg');
         background-position: center bottom;
         background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: $gutter-width*2;
-        padding-bottom: $gutter-width*8;
+        background-size: 100%;
+        padding-top: $gutter-width*1;
+        padding-bottom: $gutter-width*4;
         max-width: 1400px;
+        @media (min-width: $medium-screen) {
+            padding-top: $gutter-width*2;
+            padding-bottom: $gutter-width*8;
+        }
     }
 }
 
@@ -515,13 +536,21 @@ a.button--social {
 
 .fifth-year {
     width: 70%;
-    height: 160px;
-    @extend .image-replacement;
     display: block;
-    background-image: url('../img/fifth-year.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+    margin: 0.33em auto;
+    color: $colour_red;
+    font-size: 2.4em;
+    line-height: 1em;
+    @media (min-width: $medium-screen) {
+        background-image: url('../img/fifth-year.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-indent: -1000%;
+        white-space: nowrap;
+        overflow: hidden;
+        height: 160px;
+        margin: 0 auto;
+    }
 }
 
 .hero--short {
@@ -561,7 +590,7 @@ a.button--social {
 }
 
 .grid-unit--speaker--preview {
-    @media (min-width: $medium-screen) and (max-width: $large-screen) {
+    @media (max-width: $large-screen) {
         @include grid-column--block;
         @include block-grid-half;
     }
@@ -1040,6 +1069,10 @@ a.button--social {
 }
 
 .footer--sponsors__grid-unit {
+    @media (max-width: $medium-screen) {
+        @include grid-column--block;
+        @include block-grid-half;
+    }
     @media (min-width: $medium-screen) and (max-width: $large-screen) {
         @include grid-column--block;
         @include block-grid-third;
@@ -1053,7 +1086,7 @@ a.button--social {
 .footer--sponsors__grid-unit--minor {
     @media (max-width: $medium-screen) {
         @include grid-column--block;
-        @include block-grid-half;
+        @include block-grid-third;
     }
     @media (min-width: $medium-screen) and (max-width: $large-screen) {
         @include grid-column--block;
@@ -1083,7 +1116,7 @@ a.button--social {
     background-image: url('../img/stars.svg');
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: 51px 24px;
+    background-size: 48px 22.5px;
 }
 
 .list-of-news-posts {
@@ -1238,7 +1271,11 @@ a.button--social {
 .volunteers__list {
     @include unstyled-list;
     @media (min-width: $medium-screen) {
-        @include columns(3);
+
+        li {
+            width: 33.3333%;
+            display: inline-block;
+        }
     }
 
     li {
